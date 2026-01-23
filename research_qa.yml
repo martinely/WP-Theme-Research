@@ -1,0 +1,17 @@
+name: Research QA
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sanity
+        run: |
+          echo "Research QA ok"
+          git status
+          ls -la
