@@ -50,7 +50,7 @@ jobs:
             "prompts/INNER-00_about_prompt.txt"
             "prompts/INNER-01_services_prompt.txt"
             "prompts/INNER-02_service_single_prompt.txt"
-            "appendices/Appendix_INNER_Master_Subpages.docx"
+            "appendices/Appendix_INNER_Master_Subpages.md"
             "sources/MASTER_SAMPLESET.txt"
             "sources/FALLBACK_SET.txt"
             "sources/URL_POOL.txt"
