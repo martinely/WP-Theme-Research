@@ -70,4 +70,3 @@ jobs:
             echo "tree not installed; using find:"
             find niches/counseling -maxdepth 4 -type f || true
           fi
-
