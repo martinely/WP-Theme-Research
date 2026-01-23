@@ -1,0 +1,20 @@
+/niches/
+  counseling/
+    00_results/
+      00_RESULTS_working.md
+    research/
+      TF-01_Screening.md
+      TF-02_Winner_Deep_Dive.md
+      REAL-SUM-CLEAN.md
+      SYN-01_Blueprint.md
+    prompts/
+      FIGMA-01_prompt.txt
+      INNER-00_about_prompt.txt
+      INNER-01_services_prompt.txt
+      INNER-02_service_single_prompt.txt
+    appendices/
+      Appendix_INNER_Master_Subpages.docx
+    sources/
+      MASTER_SAMPLESET.txt
+      FALLBACK_SET.txt
+      URL_POOL.txt
