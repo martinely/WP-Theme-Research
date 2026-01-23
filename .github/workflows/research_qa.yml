@@ -3,8 +3,9 @@ name: Research QA
 on:
   pull_request:
     branches: [ "main" ]
-  push:
-    branches: [ "main" ]
+    paths:
+      - "niches/**"
+      - ".github/workflows/research_qa.yml"
   workflow_dispatch:
     inputs:
       niche:
@@ -39,7 +40,6 @@ jobs:
             exit 1
           fi
 
-          # Required files relative to each niche root
           REQUIRED_REL=(
             "00_results/00_RESULTS_working.md"
             "research/TF-01_Screening.md"
@@ -50,7 +50,7 @@ jobs:
             "prompts/INNER-00_about_prompt.txt"
             "prompts/INNER-01_services_prompt.txt"
             "prompts/INNER-02_service_single_prompt.txt"
-            "appendices/Appendix_INNER_Master_Subpages.docx"
+            "appendices/Appendix_INNER_Master_Subpages.md"
             "sources/MASTER_SAMPLESET.txt"
             "sources/FALLBACK_SET.txt"
             "sources/URL_POOL.txt"
@@ -59,7 +59,6 @@ jobs:
           fail=0
 
           has_real_url_line() {
-            # at least one non-empty, non-comment line that starts with http(s)
             local f="$1"
             [[ -f "$f" ]] || return 1
             grep -E '^\s*https?://' "$f" >/dev/null 2>&1
@@ -87,7 +86,6 @@ jobs:
             echo ""
             echo "== Validating: $niche_dir =="
 
-            # 1) Required files exist and are non-empty
             for rel in "${REQUIRED_REL[@]}"; do
               p="${niche_dir}/${rel}"
               if [[ ! -f "$p" ]]; then
@@ -101,12 +99,10 @@ jobs:
               fi
             done
 
-            # 2) FIGMA prompt must be <= 5000 chars
             if ! check_figma_len "${niche_dir}/prompts/FIGMA-01_prompt.txt"; then
               fail=1
             fi
 
-            # 3) Source pools must contain at least one real URL line
             for f in "${niche_dir}/sources/MASTER_SAMPLESET.txt" \
                      "${niche_dir}/sources/FALLBACK_SET.txt" \
                      "${niche_dir}/sources/URL_POOL.txt"; do

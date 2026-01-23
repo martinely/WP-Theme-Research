@@ -24,3 +24,4 @@
 
 ## Decisions / Open questions
 - Decision: Booking UX uses external scheduling embed/link + modal; internal forms are fallback only.
+
