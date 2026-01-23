@@ -2,12 +2,7 @@ name: Research QA
 
 on:
   pull_request:
-    branches: [ "main" ]
-    types: [opened, synchronize, reopened, ready_for_review]
-    paths:
-      - "niches/**"
-      - ".github/workflows/research_qa.yml"
-
+    branches: ["main"]
   workflow_dispatch:
     inputs:
       niche:
@@ -21,39 +16,55 @@ jobs:
     env:
       NICHE_INPUT: ${{ inputs.niche }}
     steps:
-      - name: Checkout
+      - name: Checkout (full history for diff)
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
+
+      - name: Detect whether niches/** changed (PR only)
+        id: detect
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # If this is NOT a PR event, skip detection (we'll validate by default).
+          if [[ "${GITHUB_EVENT_NAME}" != "pull_request" ]]; then
+            echo "niche_changed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+
+          echo "Base: $BASE_SHA"
+          echo "Head: $HEAD_SHA"
+
+          # List changed files between base and head
+          CHANGED="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" || true)"
+          echo "Changed files:"
+          echo "$CHANGED"
+
+          if echo "$CHANGED" | grep -Eq '^(niches/|\.github/workflows/research_qa\.yml)'; then
+            echo "niche_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "niche_changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fast exit when niches/** not changed (PR only)
+        if: ${{ github.event_name == 'pull_request' && steps.detect.outputs.niche_changed == 'false' }}
+        run: |
+          echo "✅ No changes under niches/** (or workflow). Skipping validation."
+          exit 0
 
       - name: Validate niche structure + required artifacts
         shell: bash
         run: |
           set -euo pipefail
 
-          echo "Event: ${GITHUB_EVENT_NAME}"
           echo "NICHE_INPUT='${NICHE_INPUT:-}'"
 
-          # Choose which niche folders to validate:
-          # - If workflow_dispatch input is provided: validate that single niche
-          # - Else if PR event: validate only changed niche folders in this PR
-          # - Else: validate all niches
           if [[ -n "${NICHE_INPUT:-}" ]]; then
             NICHES=( "niches/${NICHE_INPUT}" )
-          elif [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
-            echo "PR mode: detecting changed niche folders…"
-            git fetch --no-tags --prune --depth=1 origin "${GITHUB_BASE_REF}"
-            CHANGED=$(git diff --name-only "origin/${GITHUB_BASE_REF}"...HEAD || true)
-
-            mapfile -t NICHES < <(echo "$CHANGED" \
-              | grep -E '^niches/[^/]+/' \
-              | awk -F/ '{print $1"/"$2}' \
-              | sort -u)
-
-            if [[ "${#NICHES[@]}" -eq 0 ]]; then
-              echo "No niche folder changes detected; nothing to validate."
-              exit 0
-            fi
           else
             mapfile -t NICHES < <(find niches -mindepth 1 -maxdepth 1 -type d | sort)
           fi
@@ -63,7 +74,6 @@ jobs:
             exit 1
           fi
 
-          # Required files relative to each niche root
           REQUIRED_REL=(
             "00_results/00_RESULTS_working.md"
             "research/TF-01_Screening.md"
@@ -110,7 +120,6 @@ jobs:
             echo ""
             echo "== Validating: $niche_dir =="
 
-            # 1) Required files exist and are non-empty
             for rel in "${REQUIRED_REL[@]}"; do
               p="${niche_dir}/${rel}"
               if [[ ! -f "$p" ]]; then
@@ -124,12 +133,10 @@ jobs:
               fi
             done
 
-            # 2) FIGMA prompt must be <= 5000 chars
             if ! check_figma_len "${niche_dir}/prompts/FIGMA-01_prompt.txt"; then
               fail=1
             fi
 
-            # 3) Source pools must contain at least one real URL line
             for f in "${niche_dir}/sources/MASTER_SAMPLESET.txt" \
                      "${niche_dir}/sources/FALLBACK_SET.txt" \
                      "${niche_dir}/sources/URL_POOL.txt"; do
