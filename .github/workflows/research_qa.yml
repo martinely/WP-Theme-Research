@@ -2,7 +2,10 @@ name: Research QA
 
 on:
   pull_request:
-    branches: ["main"]
+    branches: [ "main" ]
+    paths:
+      - "niches/**"
+      - ".github/workflows/research_qa.yml"
   workflow_dispatch:
     inputs:
       niche:
@@ -16,45 +19,8 @@ jobs:
     env:
       NICHE_INPUT: ${{ inputs.niche }}
     steps:
-      - name: Checkout (full history for diff)
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Detect whether niches/** changed (PR only)
-        id: detect
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          # If this is NOT a PR event, skip detection (we'll validate by default).
-          if [[ "${GITHUB_EVENT_NAME}" != "pull_request" ]]; then
-            echo "niche_changed=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          BASE_SHA="${{ github.event.pull_request.base.sha }}"
-          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
-
-          echo "Base: $BASE_SHA"
-          echo "Head: $HEAD_SHA"
-
-          # List changed files between base and head
-          CHANGED="$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" || true)"
-          echo "Changed files:"
-          echo "$CHANGED"
-
-          if echo "$CHANGED" | grep -Eq '^(niches/|\.github/workflows/research_qa\.yml)'; then
-            echo "niche_changed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "niche_changed=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Fast exit when niches/** not changed (PR only)
-        if: ${{ github.event_name == 'pull_request' && steps.detect.outputs.niche_changed == 'false' }}
-        run: |
-          echo "✅ No changes under niches/** (or workflow). Skipping validation."
-          exit 0
 
       - name: Validate niche structure + required artifacts
         shell: bash
