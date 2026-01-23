@@ -2,9 +2,9 @@ name: Research QA
 
 on:
   pull_request:
-    paths:
-      - "niches/**"
-      - ".github/workflows/research_qa.yml"
+    branches: [ "main" ]
+  push:
+    branches: [ "main" ]
   workflow_dispatch:
     inputs:
       niche:
@@ -58,11 +58,6 @@ jobs:
 
           fail=0
 
-          is_nonempty_text() {
-            # true if file exists and has size > 0
-            [[ -f "$1" && -s "$1" ]]
-          }
-
           has_real_url_line() {
             # at least one non-empty, non-comment line that starts with http(s)
             local f="$1"
@@ -100,8 +95,6 @@ jobs:
                 fail=1
                 continue
               fi
-
-              # Require non-empty content for text + docx
               if [[ ! -s "$p" ]]; then
                 echo "❌ Required file is empty (0 bytes): $p"
                 fail=1
