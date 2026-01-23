@@ -1,73 +1,134 @@
 name: Research QA
 
 on:
-  workflow_dispatch:
   pull_request:
-    branches: ["main"]
-  push:
-    branches: ["main"]
+    paths:
+      - "niches/**"
+      - ".github/workflows/research_qa.yml"
+  workflow_dispatch:
+    inputs:
+      niche:
+        description: "Validate a single niche folder under /niches (e.g., counseling). Leave empty to validate all."
+        required: false
+        default: ""
 
 jobs:
   validate-research-structure:
     runs-on: ubuntu-latest
-
+    env:
+      NICHE_INPUT: ${{ inputs.niche }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Quick listing
+      - name: Validate niche structure + required artifacts
+        shell: bash
         run: |
-          echo "Root:"
-          ls -la
-          echo "niches/counseling:"
-          ls -la niches/counseling || true
+          set -euo pipefail
 
-      - name: Validate required files (counseling)
-        run: |
-          set -e
+          echo "NICHE_INPUT='${NICHE_INPUT:-}'"
 
-          REQUIRED=(
-            "niches/counseling/00_results/00_RESULTS_working.md"
-            "niches/counseling/research/TF-01_Screening.md"
-            "niches/counseling/research/TF-02_Winner_Deep_Dive.md"
-            "niches/counseling/research/REAL-SUM-CLEAN.md"
-            "niches/counseling/research/SYN-01_Blueprint.md"
-            "niches/counseling/prompts/FIGMA-01_prompt.txt"
-            "niches/counseling/prompts/INNER-00_about_prompt.txt"
-            "niches/counseling/prompts/INNER-01_services_prompt.txt"
-            "niches/counseling/prompts/INNER-02_service_single_prompt.txt"
-            "niches/counseling/sources/MASTER_SAMPLESET.txt"
-            "niches/counseling/sources/FALLBACK_SET.txt"
-            "niches/counseling/sources/URL_POOL.txt"
-          )
-
-          echo "Checking required files..."
-          MISSING=0
-          for p in "${REQUIRED[@]}"; do
-            if [ ! -f "$p" ]; then
-              echo "::error file=$p::Missing required file: $p"
-              MISSING=1
-            else
-              echo "OK: $p"
-            fi
-          done
-
-          # Appendix: allow either filename
-          APP_A="niches/counseling/appendices/Appendix_INNER_Master_Subpages.docx"
-          APP_B="niches/counseling/appendices/Appendix_INNER_Master_Subpages_v1.2.docx"
-
-          if [ -f "$APP_A" ]; then
-            echo "OK: $APP_A"
-          elif [ -f "$APP_B" ]; then
-            echo "OK: $APP_B"
+          if [[ -n "${NICHE_INPUT:-}" ]]; then
+            NICHES=( "niches/${NICHE_INPUT}" )
           else
-            echo "::error file=niches/counseling/appendices::Missing appendix docx (expected $APP_A or $APP_B)"
-            MISSING=1
+            mapfile -t NICHES < <(find niches -mindepth 1 -maxdepth 1 -type d | sort)
           fi
 
-          if [ "$MISSING" -eq 1 ]; then
-            echo "One or more required files are missing."
+          if [[ "${#NICHES[@]}" -eq 0 ]]; then
+            echo "❌ No niche folders found under /niches."
             exit 1
           fi
 
-          echo "All required files are present."
+          # Required files relative to each niche root
+          REQUIRED_REL=(
+            "00_results/00_RESULTS_working.md"
+            "research/TF-01_Screening.md"
+            "research/TF-02_Winner_Deep_Dive.md"
+            "research/REAL-SUM-CLEAN.md"
+            "research/SYN-01_Blueprint.md"
+            "prompts/FIGMA-01_prompt.txt"
+            "prompts/INNER-00_about_prompt.txt"
+            "prompts/INNER-01_services_prompt.txt"
+            "prompts/INNER-02_service_single_prompt.txt"
+            "appendices/Appendix_INNER_Master_Subpages.docx"
+            "sources/MASTER_SAMPLESET.txt"
+            "sources/FALLBACK_SET.txt"
+            "sources/URL_POOL.txt"
+          )
+
+          fail=0
+
+          is_nonempty_text() {
+            # true if file exists and has size > 0
+            [[ -f "$1" && -s "$1" ]]
+          }
+
+          has_real_url_line() {
+            # at least one non-empty, non-comment line that starts with http(s)
+            local f="$1"
+            [[ -f "$f" ]] || return 1
+            grep -E '^\s*https?://' "$f" >/dev/null 2>&1
+          }
+
+          check_figma_len() {
+            local f="$1"
+            [[ -f "$f" ]] || return 1
+            local n
+            n=$(wc -c < "$f" | tr -d ' ')
+            if [[ "$n" -gt 5000 ]]; then
+              echo "❌ FIGMA prompt too long: $f (${n} chars > 5000)"
+              return 1
+            fi
+            return 0
+          }
+
+          for niche_dir in "${NICHES[@]}"; do
+            if [[ ! -d "$niche_dir" ]]; then
+              echo "❌ Niche folder not found: $niche_dir"
+              fail=1
+              continue
+            fi
+
+            echo ""
+            echo "== Validating: $niche_dir =="
+
+            # 1) Required files exist and are non-empty
+            for rel in "${REQUIRED_REL[@]}"; do
+              p="${niche_dir}/${rel}"
+              if [[ ! -f "$p" ]]; then
+                echo "❌ Missing required file: $p"
+                fail=1
+                continue
+              fi
+
+              # Require non-empty content for text + docx
+              if [[ ! -s "$p" ]]; then
+                echo "❌ Required file is empty (0 bytes): $p"
+                fail=1
+              fi
+            done
+
+            # 2) FIGMA prompt must be <= 5000 chars
+            if ! check_figma_len "${niche_dir}/prompts/FIGMA-01_prompt.txt"; then
+              fail=1
+            fi
+
+            # 3) Source pools must contain at least one real URL line
+            for f in "${niche_dir}/sources/MASTER_SAMPLESET.txt" \
+                     "${niche_dir}/sources/FALLBACK_SET.txt" \
+                     "${niche_dir}/sources/URL_POOL.txt"; do
+              if ! has_real_url_line "$f"; then
+                echo "❌ Sources file must contain at least one URL line (https://...): $f"
+                fail=1
+              fi
+            done
+          done
+
+          if [[ "$fail" -eq 1 ]]; then
+            echo ""
+            echo "❌ Research QA failed."
+            exit 1
+          fi
+
+          echo ""
+          echo "✅ Research QA passed for: ${NICHES[*]}"
