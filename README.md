@@ -38,7 +38,7 @@ jobs:
             "niches/counseling/prompts/INNER-00_about_prompt.txt"
             "niches/counseling/prompts/INNER-01_services_prompt.txt"
             "niches/counseling/prompts/INNER-02_service_single_prompt.txt"
-            "niches/counseling/appendices/Appendix_INNER_Master_Subpages.docx"
+            "niches/counseling/appendices/Appendix_INNER_Master_Subpages.md"
             "niches/counseling/sources/MASTER_SAMPLESET.txt"
             "niches/counseling/sources/FALLBACK_SET.txt"
             "niches/counseling/sources/URL_POOL.txt"
