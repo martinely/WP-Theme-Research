@@ -1,20 +1,73 @@
-/niches/
-  counseling/
-    00_results/
-      00_RESULTS_working.md
-    research/
-      TF-01_Screening.md
-      TF-02_Winner_Deep_Dive.md
-      REAL-SUM-CLEAN.md
-      SYN-01_Blueprint.md
-    prompts/
-      FIGMA-01_prompt.txt
-      INNER-00_about_prompt.txt
-      INNER-01_services_prompt.txt
-      INNER-02_service_single_prompt.txt
-    appendices/
-      Appendix_INNER_Master_Subpages.docx
-    sources/
-      MASTER_SAMPLESET.txt
-      FALLBACK_SET.txt
-      URL_POOL.txt
+name: Research QA
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+
+jobs:
+  validate-research-structure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Quick listing
+        run: |
+          echo "Root:"
+          ls -la
+          echo "niches/counseling:"
+          ls -la niches/counseling || true
+
+      - name: Validate required files (counseling)
+        run: |
+          set -e
+
+          REQUIRED=(
+            "niches/counseling/00_results/00_RESULTS_working.md"
+            "niches/counseling/research/TF-01_Screening.md"
+            "niches/counseling/research/TF-02_Winner_Deep_Dive.md"
+            "niches/counseling/research/REAL-SUM-CLEAN.md"
+            "niches/counseling/research/SYN-01_Blueprint.md"
+            "niches/counseling/prompts/FIGMA-01_prompt.txt"
+            "niches/counseling/prompts/INNER-00_about_prompt.txt"
+            "niches/counseling/prompts/INNER-01_services_prompt.txt"
+            "niches/counseling/prompts/INNER-02_service_single_prompt.txt"
+            "niches/counseling/sources/MASTER_SAMPLESET.txt"
+            "niches/counseling/sources/FALLBACK_SET.txt"
+            "niches/counseling/sources/URL_POOL.txt"
+          )
+
+          echo "Checking required files..."
+          MISSING=0
+          for p in "${REQUIRED[@]}"; do
+            if [ ! -f "$p" ]; then
+              echo "::error file=$p::Missing required file: $p"
+              MISSING=1
+            else
+              echo "OK: $p"
+            fi
+          done
+
+          # Appendix: allow either filename
+          APP_A="niches/counseling/appendices/Appendix_INNER_Master_Subpages.docx"
+          APP_B="niches/counseling/appendices/Appendix_INNER_Master_Subpages_v1.2.docx"
+
+          if [ -f "$APP_A" ]; then
+            echo "OK: $APP_A"
+          elif [ -f "$APP_B" ]; then
+            echo "OK: $APP_B"
+          else
+            echo "::error file=niches/counseling/appendices::Missing appendix docx (expected $APP_A or $APP_B)"
+            MISSING=1
+          fi
+
+          if [ "$MISSING" -eq 1 ]; then
+            echo "One or more required files are missing."
+            exit 1
+          fi
+
+          echo "All required files are present."
