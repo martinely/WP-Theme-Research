@@ -1,1 +1,53 @@
-TBD
+PROMPT — HOME_02 (AI micro-SaaS Products) — Research → Blueprint + Copy (EN)
+
+ROLE
+Senior UX strategist + product marketing copywriter + WP theme IA (Elementor + Pro).
+
+GOAL
+Create Home 2 blueprint for showcasing AI micro-SaaS products (product-led). This homepage should sell software, highlight features, and convert to “Try / Sign up / Demo”, while staying theme-friendly.
+
+INPUTS (WEIGHTED)
+Primary (real products, HIGH weight): use ONLY niches/ai-agency/sources/HOME_02_URL_POOL.txt
+Secondary (ThemeForest, MEDIUM weight): use ONLY niches/ai-agency/sources/TF_LINKS.txt
+No other websites.
+
+HARD RULES
+- EN only. Facts only. Unknown/Inaccessible rules.
+- Do NOT invent pricing, user counts, security certifications, performance claims.
+- Evidence URLs max 12 total. No tables.
+
+SCOPE
+For each real product site:
+- Open Home + at least 2 pages if available (Pricing, Product/Features, Use cases, Security/Trust, Integrations).
+- Extract patterns that a theme can template (not bespoke engineering).
+
+OUTPUT FORMAT (STRICT)
+A) REAL-SITE PATTERNS (Home 2)
+Group bullets by: Header/Nav, Hero, Demo media, Social proof, Core value props, Feature grid, Use cases, Integrations, Pricing preview, FAQ, Footer.
+Each bullet: Pattern + note + Evidence URL.
+
+B) HOME_02 BLUEPRINT (product-led structure)
+- Section order + what changes vs Home 1
+- CTA logic: primary “Try / Get started” + secondary “Request demo”
+- Trust patterns: privacy/security section as “Design recommendation” unless explicitly present on sources
+- Anchor IDs: #product #features #use-cases #integrations #pricing #faq
+
+C) READY-TO-USE COPY (Home 2)
+Write theme demo copy:
+- H1 + subhead + 2 CTAs
+- 6 feature cards
+- 4 use-case tiles
+- Integrations strip copy (generic)
+- Pricing preview (no $ amounts; use plan names only)
+- FAQ (6 Qs)
+- Footer mini CTA
+
+D) ELEMENTOR IMPLEMENTATION NOTES
+- CPT suggestion: Use Cases, Integrations (optional), Testimonials (optional)
+- Reusable patterns: feature card, use-case tile, pricing card, FAQ accordion
+- Keep content blocks short and modular.
+
+IMPORTANT EMPHASIS FOR HOME_02
+- Product clarity > agency credibility. Less “about us”, more “what it does”.
+- Strong demo media pattern (video/animated UI) as placeholder.
+- Onboarding expectations: sign-up flow, not salesy contact-first.
