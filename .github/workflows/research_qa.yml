@@ -3,7 +3,15 @@ name: Research QA
 on:
   pull_request:
     branches: [ "main" ]
-    types: [ opened, synchronize, reopened ]
+    types: [ opened, synchronize, reopened, ready_for_review ]
+    paths:
+      - "niches/**"
+      - ".github/workflows/research_qa.yml"
+
+  # ✅ гарантира, че QA тръгва за авто-бранчове, дори PR event да не се “събуди”
+  push:
+    branches:
+      - "auto/**"
     paths:
       - "niches/**"
       - ".github/workflows/research_qa.yml"
@@ -45,22 +53,6 @@ jobs:
             exit 1
           fi
 
-          REQUIRED_REL=(
-            "00_results/00_RESULTS_working.md"
-            "research/TF-01_Screening.md"
-            "research/TF-02_Winner_Deep_Dive.md"
-            "research/REAL-SUM-CLEAN.md"
-            "research/SYN-01_Blueprint.md"
-            "prompts/FIGMA-01_prompt.txt"
-            "prompts/INNER-00_about_prompt.txt"
-            "prompts/INNER-01_services_prompt.txt"
-            "prompts/INNER-02_service_single_prompt.txt"
-            "appendices/Appendix_INNER_Master_Subpages.md"
-            "sources/MASTER_SAMPLESET.txt"
-            "sources/FALLBACK_SET.txt"
-            "sources/URL_POOL.txt"
-          )
-
           fail=0
 
           has_real_url_line() {
@@ -81,11 +73,37 @@ jobs:
             return 0
           }
 
+          COMMON_REQUIRED_REL=(
+            "00_results/00_RESULTS_working.md"
+            "research/TF-01_Screening.md"
+            "research/TF-02_Winner_Deep_Dive.md"
+            "research/REAL-SUM-CLEAN.md"
+            "research/SYN-01_Blueprint.md"
+            "prompts/FIGMA-01_prompt.txt"
+            "prompts/INNER-00_about_prompt.txt"
+            "prompts/INNER-01_services_prompt.txt"
+            "prompts/INNER-02_service_single_prompt.txt"
+            "appendices/Appendix_INNER_Master_Subpages.md"
+          )
+
+          LEGACY_SOURCE_FILES=(
+            "sources/MASTER_SAMPLESET.txt"
+            "sources/FALLBACK_SET.txt"
+            "sources/URL_POOL.txt"
+          )
+
+          MULTIHOME_SOURCE_FILES=(
+            "sources/TF_LINKS.txt"
+            "sources/HOME_01_URL_POOL.txt"
+            "sources/HOME_02_URL_POOL.txt"
+            "sources/HOME_03_URL_POOL.txt"
+          )
+
           for niche_dir in "${NICHES[@]}"; do
             echo ""
             echo "== Validating: $niche_dir =="
 
-            for rel in "${REQUIRED_REL[@]}"; do
+            for rel in "${COMMON_REQUIRED_REL[@]}"; do
               p="${niche_dir}/${rel}"
               if [[ ! -f "$p" ]]; then
                 echo "❌ Missing required file: $p"
@@ -102,14 +120,37 @@ jobs:
               fail=1
             fi
 
-            for f in "${niche_dir}/sources/MASTER_SAMPLESET.txt" \
-                     "${niche_dir}/sources/FALLBACK_SET.txt" \
-                     "${niche_dir}/sources/URL_POOL.txt"; do
-              if ! has_real_url_line "$f"; then
-                echo "❌ Sources file must contain at least one URL line (https://...): $f"
-                fail=1
-              fi
-            done
+            if [[ -f "${niche_dir}/sources/TF_LINKS.txt" ]]; then
+              echo "Mode: MULTIHOME (TF_LINKS detected)"
+
+              for rel in "${MULTIHOME_SOURCE_FILES[@]}"; do
+                p="${niche_dir}/${rel}"
+                if [[ ! -f "$p" ]]; then
+                  echo "❌ Missing required file: $p"
+                  fail=1
+                  continue
+                fi
+                if ! has_real_url_line "$p"; then
+                  echo "❌ Sources file must contain at least one URL line (https://...): $p"
+                  fail=1
+                fi
+              done
+            else
+              echo "Mode: LEGACY (no TF_LINKS)"
+
+              for rel in "${LEGACY_SOURCE_FILES[@]}"; do
+                p="${niche_dir}/${rel}"
+                if [[ ! -f "$p" ]]; then
+                  echo "❌ Missing required file: $p"
+                  fail=1
+                  continue
+                fi
+                if ! has_real_url_line "$p"; then
+                  echo "❌ Sources file must contain at least one URL line (https://...): $p"
+                  fail=1
+                fi
+              done
+            fi
           done
 
           if [[ "$fail" -eq 1 ]]; then
