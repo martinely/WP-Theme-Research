@@ -1,0 +1,88 @@
+STEP: TF-02 Winner Deep Dive (AI Agency theme) — audit-ready
+
+TARGET THEME (winner from TF-01):
+Neuros — https://themeforest.net/item/neuros-ai-agency-technology-wordpress-theme/52246267
+
+GOAL
+Produce an audit-ready deep dive of the winner theme to extract:
+1) What exactly it ships (facts only)
+2) The demo IA / section patterns relevant to our 3-home strategy
+3) Conversion/lead-capture patterns (forms vs booking vs CTA paths)
+4) Reliability / support / bugs signals from comments (audit format)
+
+CONTEXT (our product)
+One WordPress theme with ONE design system, but 3 distinct homepages:
+HOME-01: AI Automation / Integration Agency (primary)
+HOME-02: AI micro-SaaS products
+HOME-03: AI trainers / consultants
+We want distinct hero + distinct sections order per home, but shared components/tokens.
+
+HARD RULES
+- Facts only unless explicitly labeled “Inference”.
+- If not visible: write “Unknown”.
+- If blocked: write “Inaccessible”.
+- Evidence URLs must be explicit page URLs you opened (listing / demo / comment page, plus any deep demo subpages if you use them).
+- No invented stats (sales, dates, counts). Use exact values visible on the listing or “Unknown”.
+- Booking: if no external scheduling integration is shown, say “Not shown”. Do NOT assume Calendly etc.
+
+PAGES TO OPEN (minimum)
+1) ThemeForest listing (Neuros)
+2) Live demo home (root demo URL)
+3) At least 2 additional demo pages:
+   - One “Services/What we do” style page (or closest)
+   - One “Contact/Lead” page (or closest)
+4) ThemeForest comments tab
+
+IF MULTIPLE DEMOS / HOME VARIANTS EXIST
+- Identify up to 3 demo home variants that best map to our 3 homes:
+  - Agency (H1)
+  - SaaS/product (H2)
+  - Training/consulting (H3)
+If not available, mark missing ones as “Unknown” and don’t force-fit.
+
+OUTPUT FORMAT (STRICT)
+
+A) Listing facts (with evidence URLs per bullet)
+- Theme name, author, exact Created date, exact Last update date, exact price, exact sales (or Unknown)
+- Tech stack signals visible on listing (builder, plugins required, WooCommerce, performance claims) — facts only
+- Import/demo setup promises (facts only)
+- License/support period wording (facts only)
+
+B) Demo IA patterns (map to our 3 homes)
+For each identified demo home variant (max 3):
+- Demo name/label (if any) + exact demo URL
+- Above-the-fold: H1 style, subhead style, primary CTA label, secondary CTA label, proof elements
+- Section order (top → bottom) as a bullet sequence
+- Reusable component patterns (cards, icon grids, case studies, pricing blocks, testimonials, FAQ, stats, logos, comparison tables, etc.)
+- Conversion path: where CTA goes (anchor, contact page, form section, pricing, checkout, etc.)
+
+C) Lead capture + “booking” reality (facts only)
+- What lead capture exists: contact form fields, newsletter, chat widget, quote request, etc.
+- Any external scheduler shown? If none: “Not shown”.
+- Any gating patterns (popup, sticky CTA, floating buttons) and exact locations.
+
+D) Design system extraction (facts + small inferences)
+- Colors/typography tone (Inference allowed, clearly labeled)
+- Layout density: spacing, section rhythm, grid usage (Inference)
+- Signature UI motifs (facts): gradients, blobs, glassmorphism, icon style, motion cues, etc.
+- What is reusable across our 3 homes vs what should differ (Inference)
+
+E) Comments (AUDIT format, 10 items)
+For 10 distinct issues/questions/praises:
+- Exact comments URL (must be the ThemeForest comments page URL)
+- Comment date + commenter name (as shown)
+- 5–10 word excerpt (verbatim)
+- Issue label (e.g., demo import, fatal error, Elementor, WP version, performance, support speed, docs, mobile bug)
+If you cannot reliably capture date/name/excerpt: mark “Unknown source” and keep only a general issue.
+
+F) “Beat the winner” opportunity notes (grounded)
+- 5 concrete product opportunities derived from facts in A–E
+- Each opportunity must cite at least one evidence URL (listing/demo/comments) and/or be an Inference explicitly labeled
+
+EVIDENCE URL RULE
+- Put the evidence URL inline at the end of each bullet.
+- Max 12 evidence URLs total; choose the most representative.
+
+LANGUAGE
+Output in EN only.
+No tables unless the section explicitly asks for an audit list.
