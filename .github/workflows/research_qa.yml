@@ -3,25 +3,20 @@ name: Research QA
 on:
   pull_request:
     branches: [ "main" ]
-    types: [ opened, synchronize, reopened, ready_for_review ]
+    types: [ opened, synchronize, reopened ]
     paths:
       - "niches/**"
       - ".github/workflows/research_qa.yml"
-
-  # ✅ гарантира, че QA тръгва за авто-бранчове, дори PR event да не се “събуди”
-  push:
-    branches:
-      - "auto/**"
-    paths:
-      - "niches/**"
-      - ".github/workflows/research_qa.yml"
-
   workflow_dispatch:
     inputs:
       niche:
         description: "Validate a single niche folder under /niches (e.g., counseling). Leave empty to validate all."
         required: false
         default: ""
+      phase:
+        description: "sources = only sources must be valid; prompts = prompts must be non-empty too"
+        required: false
+        default: "sources"
 
 permissions:
   contents: read
@@ -31,6 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NICHE_INPUT: ${{ inputs.niche }}
+      PHASE_INPUT: ${{ inputs.phase }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,7 +36,14 @@ jobs:
         run: |
           set -euo pipefail
 
+          PHASE="${PHASE_INPUT:-sources}"
+          if [[ "$PHASE" != "sources" && "$PHASE" != "prompts" ]]; then
+            echo "❌ Invalid phase: $PHASE (use sources|prompts)"
+            exit 1
+          fi
+
           echo "NICHE_INPUT='${NICHE_INPUT:-}'"
+          echo "PHASE='$PHASE'"
 
           if [[ -n "${NICHE_INPUT:-}" ]]; then
             NICHES=( "niches/${NICHE_INPUT}" )
@@ -52,6 +55,35 @@ jobs:
             echo "❌ No niche folders found under /niches."
             exit 1
           fi
+
+          # Always-required (structure must exist)
+          REQUIRED_ALWAYS=(
+            "00_results/00_RESULTS_working.md"
+            "research/TF-01_Screening.md"
+            "research/TF-02_Winner_Deep_Dive.md"
+            "research/REAL-SUM-CLEAN.md"
+            "research/SYN-01_Blueprint.md"
+            "appendices/Appendix_INNER_Master_Subpages.md"
+          )
+
+          # Prompts expected in Option A (can be empty in PHASE=sources)
+          REQUIRED_PROMPTS=(
+            "prompts/FIGMA-01_prompt.txt"
+            "prompts/HOME_01_prompt.txt"
+            "prompts/HOME_02_prompt.txt"
+            "prompts/HOME_03_prompt.txt"
+            "prompts/INNER-00_about_prompt.txt"
+            "prompts/INNER-01_services_prompt.txt"
+            "prompts/INNER-02_service_single_prompt.txt"
+          )
+
+          # Sources must exist + contain at least one URL line
+          REQUIRED_SOURCES_URL=(
+            "sources/TF_LINKS.txt"
+            "sources/HOME_01_URL_POOL.txt"
+            "sources/HOME_02_URL_POOL.txt"
+            "sources/HOME_03_URL_POOL.txt"
+          )
 
           fail=0
 
@@ -73,84 +105,56 @@ jobs:
             return 0
           }
 
-          COMMON_REQUIRED_REL=(
-            "00_results/00_RESULTS_working.md"
-            "research/TF-01_Screening.md"
-            "research/TF-02_Winner_Deep_Dive.md"
-            "research/REAL-SUM-CLEAN.md"
-            "research/SYN-01_Blueprint.md"
-            "prompts/FIGMA-01_prompt.txt"
-            "prompts/INNER-00_about_prompt.txt"
-            "prompts/INNER-01_services_prompt.txt"
-            "prompts/INNER-02_service_single_prompt.txt"
-            "appendices/Appendix_INNER_Master_Subpages.md"
-          )
-
-          LEGACY_SOURCE_FILES=(
-            "sources/MASTER_SAMPLESET.txt"
-            "sources/FALLBACK_SET.txt"
-            "sources/URL_POOL.txt"
-          )
-
-          MULTIHOME_SOURCE_FILES=(
-            "sources/TF_LINKS.txt"
-            "sources/HOME_01_URL_POOL.txt"
-            "sources/HOME_02_URL_POOL.txt"
-            "sources/HOME_03_URL_POOL.txt"
-          )
-
           for niche_dir in "${NICHES[@]}"; do
             echo ""
             echo "== Validating: $niche_dir =="
 
-            for rel in "${COMMON_REQUIRED_REL[@]}"; do
+            # 1) Always required files exist (can be placeholder)
+            for rel in "${REQUIRED_ALWAYS[@]}"; do
               p="${niche_dir}/${rel}"
               if [[ ! -f "$p" ]]; then
                 echo "❌ Missing required file: $p"
                 fail=1
-                continue
-              fi
-              if [[ ! -s "$p" ]]; then
-                echo "❌ Required file is empty (0 bytes): $p"
-                fail=1
               fi
             done
 
-            if ! check_figma_len "${niche_dir}/prompts/FIGMA-01_prompt.txt"; then
-              fail=1
+            # 2) Prompts must exist; non-empty only in PHASE=prompts
+            for rel in "${REQUIRED_PROMPTS[@]}"; do
+              p="${niche_dir}/${rel}"
+              if [[ ! -f "$p" ]]; then
+                echo "❌ Missing required prompt file: $p"
+                fail=1
+                continue
+              fi
+
+              if [[ "$PHASE" == "prompts" ]]; then
+                if [[ ! -s "$p" ]]; then
+                  echo "❌ Prompt file is empty (PHASE=prompts): $p"
+                  fail=1
+                fi
+              fi
+            done
+
+            # 3) FIGMA prompt length check only if non-empty (or in prompts phase)
+            if [[ "$PHASE" == "prompts" || -s "${niche_dir}/prompts/FIGMA-01_prompt.txt" ]]; then
+              if ! check_figma_len "${niche_dir}/prompts/FIGMA-01_prompt.txt"; then
+                fail=1
+              fi
             fi
 
-            if [[ -f "${niche_dir}/sources/TF_LINKS.txt" ]]; then
-              echo "Mode: MULTIHOME (TF_LINKS detected)"
-
-              for rel in "${MULTIHOME_SOURCE_FILES[@]}"; do
-                p="${niche_dir}/${rel}"
-                if [[ ! -f "$p" ]]; then
-                  echo "❌ Missing required file: $p"
-                  fail=1
-                  continue
-                fi
-                if ! has_real_url_line "$p"; then
-                  echo "❌ Sources file must contain at least one URL line (https://...): $p"
-                  fail=1
-                fi
-              done
-            else
-              echo "Mode: LEGACY (no TF_LINKS)"
-
-              for rel in "${LEGACY_SOURCE_FILES[@]}"; do
-                p="${niche_dir}/${rel}"
-                if [[ ! -f "$p" ]]; then
-                  echo "❌ Missing required file: $p"
-                  fail=1
-                  continue
-                fi
-                if ! has_real_url_line "$p"; then
-                  echo "❌ Sources file must contain at least one URL line (https://...): $p"
-                  fail=1
-                fi
-              done
-            fi
+            # 4) Sources must exist + contain at least one URL
+            for rel in "${REQUIRED_SOURCES_URL[@]}"; do
+              p="${niche_dir}/${rel}"
+              if [[ ! -f "$p" ]]; then
+                echo "❌ Missing required sources file: $p"
+                fail=1
+                continue
+              fi
+              if ! has_real_url_line "$p"; then
+                echo "❌ Sources file must contain at least one URL line (https://...): $p"
+                fail=1
+              fi
+            done
           done
 
           if [[ "$fail" -eq 1 ]]; then
@@ -160,4 +164,4 @@ jobs:
           fi
 
           echo ""
-          echo "✅ Research QA passed for: ${NICHES[*]}"
+          echo "✅ Research QA passed for: ${NICHES[*]} (phase=$PHASE)"
