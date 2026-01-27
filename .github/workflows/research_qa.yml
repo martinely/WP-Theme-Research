@@ -3,15 +3,7 @@ name: Research QA
 on:
   pull_request:
     branches: [ "main" ]
-    types: [ opened, synchronize, reopened, ready_for_review ]
-    paths:
-      - "niches/**"
-      - ".github/workflows/research_qa.yml"
-
-  # ✅ гарантира, че QA тръгва за авто-бранчове, дори PR event да не се “събуди”
-  push:
-    branches:
-      - "auto/**"
+    types: [ opened, synchronize, reopened ]
     paths:
       - "niches/**"
       - ".github/workflows/research_qa.yml"
@@ -34,6 +26,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Validate niche structure + required artifacts
         shell: bash
@@ -41,17 +35,103 @@ jobs:
           set -euo pipefail
 
           echo "NICHE_INPUT='${NICHE_INPUT:-}'"
+          echo "EVENT_NAME='${GITHUB_EVENT_NAME}'"
+          echo "BASE_REF='${GITHUB_BASE_REF:-}'"
 
+          # Ensure base ref exists locally for diff
+          if [[ "${GITHUB_EVENT_NAME}" == "pull_request" && -n "${GITHUB_BASE_REF:-}" ]]; then
+            git fetch --no-tags --prune --depth=1 origin "${GITHUB_BASE_REF}:${GITHUB_BASE_REF}" || true
+            git fetch --no-tags --prune --depth=1 origin "${GITHUB_BASE_REF}" || true
+            git fetch --no-tags --prune origin "${GITHUB_BASE_REF}" || true
+          fi
+
+          determine_changed_niches() {
+            local base_ref="${GITHUB_BASE_REF:-}"
+            [[ -n "$base_ref" ]] || return 1
+
+            # Diff against base branch (merge-base style)
+            mapfile -t changed < <(git diff --name-only "origin/${base_ref}...HEAD" || true)
+
+            if [[ "${#changed[@]}" -eq 0 ]]; then
+              return 1
+            fi
+
+            # Extract unique "niches/<name>" dirs, skip blanks safely
+            mapfile -t niches < <(
+              printf "%s\n" "${changed[@]}" \
+                | awk -F/ 'NF>=2 && $1=="niches" && $2!="" {print "niches/"$2}' \
+                | sort -u
+            )
+
+            # Filter out any empty lines just in case
+            local out=()
+            for n in "${niches[@]:-}"; do
+              [[ -n "${n// /}" ]] && out+=( "$n" )
+            done
+
+            if [[ "${#out[@]}" -eq 0 ]]; then
+              return 1
+            fi
+
+            printf "%s\n" "${out[@]}"
+            return 0
+          }
+
+          # -----------------------------
+          # Decide WHICH niches to validate
+          # -----------------------------
           if [[ -n "${NICHE_INPUT:-}" ]]; then
             NICHES=( "niches/${NICHE_INPUT}" )
           else
-            mapfile -t NICHES < <(find niches -mindepth 1 -maxdepth 1 -type d | sort)
+            if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
+              if mapfile -t NICHES < <(determine_changed_niches); then
+                echo "Validating only changed niches in PR:"
+                printf " - %s\n" "${NICHES[@]}"
+              else
+                echo "No niche changes detected in PR (or diff unavailable) -> validating ALL niches."
+                mapfile -t NICHES < <(find niches -mindepth 1 -maxdepth 1 -type d | sort)
+              fi
+            else
+              mapfile -t NICHES < <(find niches -mindepth 1 -maxdepth 1 -type d | sort)
+            fi
           fi
 
           if [[ "${#NICHES[@]}" -eq 0 ]]; then
             echo "❌ No niche folders found under /niches."
             exit 1
           fi
+
+          # -----------------------------
+          # Core required files (always)
+          # -----------------------------
+          REQUIRED_CORE=(
+            "00_results/00_RESULTS_working.md"
+            "research/TF-01_Screening.md"
+            "research/TF-02_Winner_Deep_Dive.md"
+            "research/REAL-SUM-CLEAN.md"
+            "research/SYN-01_Blueprint.md"
+            "prompts/FIGMA-01_prompt.txt"
+            "prompts/INNER-00_about_prompt.txt"
+            "prompts/INNER-01_services_prompt.txt"
+            "prompts/INNER-02_service_single_prompt.txt"
+            "appendices/Appendix_INNER_Master_Subpages.md"
+            "sources/MASTER_SAMPLESET.txt"
+            "sources/FALLBACK_SET.txt"
+            "sources/URL_POOL.txt"
+          )
+
+          REQUIRED_3H_SOURCES=(
+            "sources/TF_LINKS.txt"
+            "sources/HOME_01_URL_POOL.txt"
+            "sources/HOME_02_URL_POOL.txt"
+            "sources/HOME_03_URL_POOL.txt"
+          )
+
+          REQUIRED_3H_PROMPTS=(
+            "prompts/HOME_01_prompt.txt"
+            "prompts/HOME_02_prompt.txt"
+            "prompts/HOME_03_prompt.txt"
+          )
 
           fail=0
 
@@ -73,37 +153,18 @@ jobs:
             return 0
           }
 
-          COMMON_REQUIRED_REL=(
-            "00_results/00_RESULTS_working.md"
-            "research/TF-01_Screening.md"
-            "research/TF-02_Winner_Deep_Dive.md"
-            "research/REAL-SUM-CLEAN.md"
-            "research/SYN-01_Blueprint.md"
-            "prompts/FIGMA-01_prompt.txt"
-            "prompts/INNER-00_about_prompt.txt"
-            "prompts/INNER-01_services_prompt.txt"
-            "prompts/INNER-02_service_single_prompt.txt"
-            "appendices/Appendix_INNER_Master_Subpages.md"
-          )
-
-          LEGACY_SOURCE_FILES=(
-            "sources/MASTER_SAMPLESET.txt"
-            "sources/FALLBACK_SET.txt"
-            "sources/URL_POOL.txt"
-          )
-
-          MULTIHOME_SOURCE_FILES=(
-            "sources/TF_LINKS.txt"
-            "sources/HOME_01_URL_POOL.txt"
-            "sources/HOME_02_URL_POOL.txt"
-            "sources/HOME_03_URL_POOL.txt"
-          )
+          is_3homes_mode() {
+            local niche_dir="$1"
+            [[ -f "${niche_dir}/sources/TF_LINKS.txt" ]] && return 0
+            [[ -f "${niche_dir}/sources/HOME_01_URL_POOL.txt" ]] && return 0
+            return 1
+          }
 
           for niche_dir in "${NICHES[@]}"; do
             echo ""
             echo "== Validating: $niche_dir =="
 
-            for rel in "${COMMON_REQUIRED_REL[@]}"; do
+            for rel in "${REQUIRED_CORE[@]}"; do
               p="${niche_dir}/${rel}"
               if [[ ! -f "$p" ]]; then
                 echo "❌ Missing required file: $p"
@@ -120,33 +181,44 @@ jobs:
               fail=1
             fi
 
-            if [[ -f "${niche_dir}/sources/TF_LINKS.txt" ]]; then
-              echo "Mode: MULTIHOME (TF_LINKS detected)"
+            for f in "${niche_dir}/sources/MASTER_SAMPLESET.txt" \
+                     "${niche_dir}/sources/FALLBACK_SET.txt" \
+                     "${niche_dir}/sources/URL_POOL.txt"; do
+              if ! has_real_url_line "$f"; then
+                echo "❌ Sources file must contain at least one URL line (https://...): $f"
+                fail=1
+              fi
+            done
 
-              for rel in "${MULTIHOME_SOURCE_FILES[@]}"; do
+            if is_3homes_mode "$niche_dir"; then
+              echo "Detected 3-homes mode -> enforcing extra source + prompt files"
+
+              for rel in "${REQUIRED_3H_SOURCES[@]}"; do
                 p="${niche_dir}/${rel}"
                 if [[ ! -f "$p" ]]; then
-                  echo "❌ Missing required file: $p"
+                  echo "❌ Missing required sources file: $p"
                   fail=1
                   continue
+                fi
+                if [[ ! -s "$p" ]]; then
+                  echo "❌ Required sources file is empty (0 bytes): $p"
+                  fail=1
                 fi
                 if ! has_real_url_line "$p"; then
                   echo "❌ Sources file must contain at least one URL line (https://...): $p"
                   fail=1
                 fi
               done
-            else
-              echo "Mode: LEGACY (no TF_LINKS)"
 
-              for rel in "${LEGACY_SOURCE_FILES[@]}"; do
+              for rel in "${REQUIRED_3H_PROMPTS[@]}"; do
                 p="${niche_dir}/${rel}"
                 if [[ ! -f "$p" ]]; then
-                  echo "❌ Missing required file: $p"
+                  echo "❌ Missing required prompt file: $p"
                   fail=1
                   continue
                 fi
-                if ! has_real_url_line "$p"; then
-                  echo "❌ Sources file must contain at least one URL line (https://...): $p"
+                if [[ ! -s "$p" ]]; then
+                  echo "❌ Required prompt file is empty (0 bytes): $p"
                   fail=1
                 fi
               done
@@ -160,4 +232,4 @@ jobs:
           fi
 
           echo ""
-          echo "✅ Research QA passed for: ${NICHES[*]}"
+          echo "✅ Research QA passed."
