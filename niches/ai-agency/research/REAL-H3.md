@@ -1,386 +1,1078 @@
-This report summarises ten websites that position themselves as AI trainers or consultants. Each site
-was explored for its home and at least two inner pages (courses/programmes, corporate training/
-teams, about/instructors, pricing/contact). When pages were inaccessible or heavily scripted the site
-was marked accordingly. Observations focus on the offerings, target audiences, programme structures
-and notable differentiators.
-
-
 A) Site cards
-Elevate AI Consulting – elevateaiconsulting.com
-•
-•
-•
-•
-Value proposition: The home page markets executive AI training, corporate bootcamps,
-individual workshops, custom AI agents and automation solutions. It claims more than 50
-tailored use‑cases and measurable outcomes like saving 10 + hours per week and reducing
-administrative tasks by 80 % 1
-. The business emphasises multilingual support (English,
-Portuguese and Spanish) and stresses a human‑centred, responsible AI philosophy.
-Corporate bootcamps: A two‑day immersive programme for directors, VP‑level managers and
-C‑suite leaders. Sessions cover AI fundamentals, a deep dive into prompt engineering, tool
-discovery, ideation sprints and building custom bots. Programmes are customised to specific
-2 3
-industries, delivered on‑site or remotely and promise measurable ROI within 30 days .
-Individual workshops: 75–90 minute sessions on AI fundamentals, prompt engineering,
-ChatGPT/Copilot/Gemini power‑hours and AI tool discovery. Packages vary from a single session
-to multi‑session bundles aimed at core skills or senior leadership and can be customised for
-departments. Benefits include instruction from a certified AI consultant, enterprise experience,
-4 5
-multilingual delivery and action‑oriented training .
-About/instructors: Founder Thiago Ferreira (adjunct professor and chief AI officer) champions
-a human‑centred AI approach. The “About” page details his certifications, memberships and
-teaching roles and outlines tasks of a certified AI consultant—spotting AI opportunities, planning
-6 7
-and building tools, training teams and providing ongoing support .
-Udacity – udacity.com
-•
-•
-•
-Executive leadership focus: The School of Executive Leadership frames AI as an essential
-competency for business leaders. The programme teaches non‑technical executives how to run
-AI, data‑science and cloud‑computing departments, arguing that understanding AI yields
-8
-competitive advantage, improves customer experiences and informs strategic decisions .
-AI for business leaders programme: A 24‑hour course covering machine‑learning fluency,
-product story‑boarding, ethical AI, AI governance, generative AI models and building
-high‑performing AI teams. Udacity also offers industry‑specific leadership programmes (AI, data
-9 10
-science or cloud) .
-Technical nanodegrees: Meta descriptions of other nanodegree programmes emphasise
-in‑depth work on minimax search, Bayesian networks and agent‑based systems, suggesting a
-project‑based curriculum that creates tangible portfolio pieces.
+The table below summarises the key observations for each AI‑training/consulting site in the Home 03
+sample. Each card captures the home‑page hook, highlights from at least two inner pages (e.g., course
+descriptions, corporate programmes, about/instructor sections), and notable design patterns. Citations
+point to the evidence found on the sites.
+Site Home‑page hook &
+orientation
+Program highlights &
+inner pages Design notes
+elevateaiconsulting.com
+The home page
+positions Elevate AI
+Consulting as a
+provider of executive
+AI training, AI
+strategy, AI agents,
+AEO and
+automations,
+promising to help
+leaders adopt AI
+responsibly with
+measurable wins
 1
-Pluralsight – pluralsight.com
-•
-•
-Generative AI for Business Leaders: A course aimed at executives and team leads that
-introduces generative models, explains how to use them for marketing, personalization and
-text/image generation, addresses ethical risks (bias, misinformation, legal risks and data
-privacy) and helps identify opportunities for integrating generative AI into strategy 11
-. The
-programme is taught by practitioners and features project‑focused demos rather than purely
-lecture‑based content. The outline can be tailored for team training.
-Thought‑leadership content: A blog post titled “Generative AI for leaders: 6 use cases for your
-organization” discusses practical applications such as generating videos (OpenAI Sora), music,
-code from images, AI agents for research tasks, custom GPTs and retrieval‑augmented
-generation for knowledge management. It encourages experimentation while acknowledging
-that AI is still early and needs human oversight 12 13
-. Additional sections emphasize security
-14
-considerations and hack‑a‑prompt challenges .
-Noble Desktop – nobledesktop.com
-•
-•
-•
-Generative AI classes: The “AI Classes” page explains why non‑programmers should learn
-generative AI and details what students learn, including ChatGPT prompt engineering, image
-generation with DALL‑E, and using Adobe Firefly in Illustrator/Photoshop. It highlights that AI
-15 16 17
-enhances workflows in data science, graphic design and digital marketing .
-Course offerings: Noble Desktop offers a 78‑hour Generative AI certificate, a 12‑hour “AI for
-Business with ChatGPT” course (with one‑on‑one training), a 6‑hour “AI for Workplace
-Productivity with Microsoft Copilot,” an 18‑hour AI for Marketing Bootcamp and additional
-courses for video/motion graphics and data analytics. The descriptions stress hands‑on, practical
-18
-learning aimed at improving communication, data analysis and marketing .
-Corporate training: The corporate page advertises live online or on‑site sessions, group class
-vouchers, and private training. It emphasises custom curriculum development, comprehensive
-support materials (handouts, exam guides and premium videos), instruction by industry
-professionals, flexible scheduling and free consultations. Testimonials note that the training is
-19 20
-engaging and immediately applicable .
-Bizzuka – bizzuka.com
-•
-•
-•
-AI SkillsBuilder: The flagship programme is a role‑focused AI training series designed for entire
-organisations. It aims to bridge the AI literacy gap and offers tailored learning paths for
-marketing, HR and C‑suite roles. Training sessions (hybrid live/recorded) teach participants to
-use the AI Strategy Canvas to align AI initiatives with business objectives and to perform
-scalable prompt engineering. Attendees build a Notion‑based prompt library to share across
-the organisation.
-AI Mastery for Business Leaders: A dedicated track for owners and executives that teaches
-leaders how to integrate AI across HR, accounting, customer service and sales. It emphasises
-avoiding costly experimentation, aligning AI strategy with objectives and scaling AI adoption.
-The programme also uses the AI Strategy Canvas and scalable prompting to build a shared
-prompt library.
-Brand promise: Meta descriptions on the home page position Bizzuka as transforming
-workforces through AI training and claim the AI SkillsBuilder accelerates team efficiency
-【245016617812988†L0-L14】.
+. Reasons to
+choose them
+include proven ROI,
+experienced AI
+professors and
+multilingual delivery
 2
-LearnPrompting – learnprompting.org
-•
-•
-•
-Mission: The home page invites users to learn, apply and get certified in AI. Courses are
-research‑backed, hands‑on and taught by leading generative AI experts. Flagship offerings
-include an AI/ML red‑teaming and security masterclass and a 7‑day prompt‑hacking course;
-21 22
-over 3 million people have used the platform .
-For Business: Services include live generative AI workshops, on‑demand video courses and AI
-transformation consulting. Clients (OpenAI, Microsoft, Deloitte, Dropbox) can upskill teams using
-curricula on ChatGPT, Microsoft Copilot, DALL‑E, MidJourney and Runway ML. Training integrates
-with existing learning‑management systems (LMS) and single‑sign‑on (SSO), provides analytics to
-measure impact and offers priority support and custom workshops tailored to industry and
-strategy 23
-. Stats highlight 3 M learners, completion rates 7× higher than industry benchmarks
-24
-and a 4.7+ average rating .
-Pricing: Plans include Free (access to free courses and certificates), Plus (US $21 per month; full
-library, AI playground, hand‑graded projects and community), Teams (US $25 per seat/month for
-2–99 users) and Enterprise (100+ users; contact sales). Higher tiers add personalised learning
-paths, an admin dashboard, dedicated success manager, advanced analytics, SSO and LMS/LXP
-25 26
-integration .
-Reliable Bits – reliablebits.io
-•
-•
-Focus: Reliable Bits appears to be a software‑development consultancy rather than an AI
-training provider. The About page expresses the mission to build exceptional digital products
-with teams that “feel like your own” and highlights values such as Build with Purpose,
-Move Fast & Stay Smart, Own the Outcome and Be Human.
-Team: The founding team includes Deepak Devjani (founder & head of machine learning),
-Greg Battle (principal) and engineering directors Vir Chan and Jytten Shakya. No pages
-describing AI training or education programmes were accessible, so this site is marked not
-clearly offering AI training.
-Northwest AI Consulting (NWAI) – nwai.co
-•
-•
-•
-•
-•
-•
-•
-Why training matters: The AI Training & Education Services page argues that enterprises
-need training to close skills gaps, prevent AI implementation failures, overcome resistance to
-27
-change and gain competitive advantage .
-Programmes: NWAI offers several tiers:
-Executive AI briefings (1–2 days) that give leadership a strategic overview of AI and its business
-value.
-Technical AI training (2–8 weeks) consisting of hands‑on workshops covering AI techniques and
-tools.
-AI literacy programmes for entire organisations, plus custom learning paths, certification
-27
-programmes, and ongoing support/mentoring .
-Industry‑specific tracks & FAQs: Training is tailored to industries (construction, banking,
-healthcare, natural resources, real estate, retail, marketing, small business) and remote
-participation is available. FAQs note that executive briefings run 1–2 days while technical training
-lasts 2–8 weeks, include guides and tools, can be done remotely and can accommodate mixed
-28
-skill levels .
-About: NWAI positions itself as a leading AI and digital‑transformation consultancy founded in
-Portland in 2021. The founding team comprises Awais Tariq (chief research officer; custom
-retrieval‑augmented generation expert), Asad Malik (chief technology officer; generative‑AI
-specialist on AWS) and Wyatt Mayham (head of AI consulting; pharmaceutical‑industry veteran).
-3
-The firm emphasises strategic AI implementations, achieving measurable ROI within 90 days and
-29
-rigorous risk management. Its workforce is highly educated (62 % PhD, 31 % MSc, 7 % BSc) .
-General Assembly – generalassemb.ly
-•
-•
-•
-AI education & upskilling: The AI Academy defines an AI journey with three stages:
-AI‑Enabled (employees gain foundational AI knowledge and role‑specific modules for
-productivity), AI‑Augmented (AI becomes part of strategic decision‑making, cross‑departmental
-scaling and ethical use) and AI‑Superpowered (leadership drives AI innovation and develops
-new AI solutions) 30
-. Target audiences include C‑suite/senior leaders, HR & learning/
-31
-development managers and technical/operational leaders .
-Implementation: Companies sign up, tailor training to roles and business goals and deliver
-training via practical exercises and real‑world case studies 32
-. Customisation options include
-expert speakers, guided post‑training support, in‑person or online delivery, industry‑specific
-content, language flexibility and AI‑readiness assessments 33
-. Participant testimonials praise
-34
-the depth of knowledge, interactive sessions and relevance of real‑world examples .
-Agentic AI Fundamentals: A three‑hour workshop where participants design, build and deploy
-their first AI agent team using CrewAI. Both technical (Python) and non‑technical (UI‑based)
-tracks are offered. Learners collaborate with peers and leave with a functioning workflow and
-35
-the confidence to implement AI agents in their organisations .
-Correlation One – correlation-one.com
-•
-Limited access: Many pages on correlation‑one.com load dynamic content that cannot be
-parsed in this environment. A snippet from a white‑paper landing page notes that people
-leaders should guide their teams from “AI panic to an AI plan” by learning the technology
-36
-themselves and ensuring employees understand how to apply it for maximum impact .
-Beyond this, no comprehensive programme descriptions were accessible, so this site is marked
-as partially unknown.
-B) Feature frequency map
-Feature/Offering
-Sites
-(out
-of 10)
-Notes
-Corporate/executive AI
-training 8
-Elevate AI, Udacity (executive leadership), Pluralsight,
-Noble Desktop, Bizzuka, LearnPrompting, NWAI, General
-Assembly all target leadership or corporate teams.
-Reliable Bits lacks training, and Correlation One remains
-unknown.
-Generative AI &
-prompt‑engineering
-instruction
-7
-Elevate AI, Udacity (generative models), Pluralsight,
-Noble Desktop, Bizzuka, LearnPrompting and General
-Assembly offer modules on prompt engineering, generative
-models and AI agents. NWAI’s content is more general;
-Reliable Bits and Correlation One are unknown.
-4
-Feature/Offering
-Sites
-(out
-of 10)
-Notes
-Customisable training
-by role/industry 8
-Elevate AI, Udacity (industry‑specific leadership
-programmes), Pluralsight (tailored team outlines),
-Noble Desktop (custom corporate curricula), Bizzuka
-(role‑focused learning paths), LearnPrompting (custom
-workshops & LMS integration), NWAI (industry‑specific
-programmes), and General Assembly (AI journey with
-role‑based modules).
-Hands‑on /
-project‑based learning 8
-Udacity (portfolio projects), Pluralsight (project‑focused
-demos), Noble Desktop (hands‑on classes), Bizzuka (building
-prompt library), LearnPrompting (interactive projects), NWAI
-(hands‑on workshops), General Assembly (real‑world case
-studies & agent workshop) and Elevate AI (action‑oriented
-workshops).
-AI strategy &
-consulting services 5
-Elevate AI, Bizzuka, LearnPrompting, NWAI and General
-Assembly offer strategic consulting, AI‑readiness
-assessments or advisory services.
-Multi‑lingual delivery 1
-Elevate AI explicitly advertises training in English,
-Portuguese and Spanish; other providers do not highlight
+.
+The services page lays out
+integrated offerings:
+corporate AI training
+bootcamps (2‑day
+immersive programmes),
+individual AI workshops,
+process automations,
+SEO/AEO optimisation,
+custom AI agents and AI
+3 4
+advisory services.
+The bootcamp page
+describes a two‑day
+course where directors,
+VPs and C‑suite learn AI
+fundamentals, prompt
+engineering and workflow
+design, resulting in 50+
+use cases and ROI within
+5 6
+30 days . The
+about page introduces
+founder Thiago Ferreira,
+emphasising a
+human‑centred mission
+and training in English,
+Portuguese and Spanish
+Hero uses bold
+typographic
+hook and
+multiple CTAs.
+Services are
+grouped in a
+stacked list with
+short
+paragraphs,
+while bootcamp
+page uses
+bullets for
+outcomes and
+target audience.
+About page
+features founder
+biography,
+mission and
 languages.
-Transparent pricing/
-plans 2 LearnPrompting lists subscription plans; Noble Desktop
-provides course durations but not always prices.
-About/Instructor bios 3 Elevate AI, NWAI and Reliable Bits include detailed founder/
-team biographies; other sites focus on programmes.
-Certification or
-credentials 3
-LearnPrompting offers certificates, NWAI mentions
-certification programmes and Bizzuka markets an
-AI Mastery track; some others imply credentials but do not
-state them explicitly.
-Frameworks or prompt
-libraries 2
-Bizzuka’s AI Strategy Canvas and Notion prompt library and
-NWAI’s custom curriculum structure emphasise frameworks
-for scalable prompting.
-C) Small‑theme translation (Home‑03 pattern)
-Websites following the “AI trainers / consultants” pattern share several common themes:
-1.
-2.
-Executive‑first messaging: Most sites emphasise that AI adoption starts with leadership.
-Bootcamps, executive briefings and business‑leader programmes promise to help C‑suite and
-VP‑level teams understand AI’s strategic value, align AI initiatives with business goals and rapidly
-achieve ROI 2 27
-. Even technical programmes frequently begin with an overview for
-8
-decision‑makers .
-Role‑ or industry‑specific curricula: Instead of one‑size‑fits‑all training, providers offer tailored
-learning paths for marketing, HR, technical teams, small‑business owners or entire
-5
-3.
-4.
-5.
-6.
-7.
-organisations. This customisation aims to close specific skills gaps and ensure learners can apply
-31
-AI within their domain .
-Emphasis on generative AI and prompt engineering: Generative tools (ChatGPT, Copilot,
-DALL‑E, CrewAI) are central to many curricula. Courses teach prompt‑writing, iteration, scalable
-prompting and building custom agents or bots 11 18
-. Frameworks like Bizzuka’s AI
-Strategy Canvas structure how prompts align with objectives.
-Hands‑on practice and real‑world projects: Programmes stress experiential learning—
-students build bots, agents or prompt libraries, complete projects that showcase AI skills or work
-through real‑world case studies. This approach signals that participants will be able to
-12 35
-implement AI immediately after training .
-Support beyond the classroom: Many providers offer ongoing mentoring, access to tool
-libraries, certification or assessments, integration with organisational LMS/SSO and analytics to
-track impact 23 27
-. This suggests a shift from one‑off workshops to continuous upskilling.
-Responsible AI messaging: Ethical considerations, bias mitigation, privacy and AI governance
-appear in several programmes (e.g., Udacity’s business‑leaders course and Pluralsight’s ethics
-modules). Providers position themselves as guides to responsible and human‑centred AI
-11
-adoption.
-Marketing through success metrics and thought leadership: Sites often highlight ROI metrics
-(hours saved, percentage reductions in admin work), feature blog posts or white papers
-1 21
-discussing AI use cases and tout large user bases or corporate clients .
-Overall, the Home‑03 pattern showcases organisations that combine education, consulting and tools
-to accelerate AI adoption. They target leadership and teams simultaneously, emphasise customisation
-and hands‑on practice, and position themselves as partners in an ongoing AI transformation rather
-than simple course vendors.
+7 8
+.
 1
+Site Home‑page hook &
+orientation
+Program highlights &
+inner pages Design notes
+udacity.com
+Udacity’s home
+page promotes
+learning in‑demand
+skills across AI, data
+and programming;
+it highlights
+hands‑on projects,
+expert mentorship
+and flexible
+programmes built
+with top tech
+9
+companies .
+The enterprise section
+tells companies Udacity
+can help de‑risk IT spend
+and deliver measurable
+10
+business results . A
+generative AI
+programme page outlines
+a 56‑hour applied
+generative‑AI course
+covering implementation
+patterns, cost estimation,
+prompt engineering,
+fine‑tuning,
+retrieval‑augmented
+generation and
+multimodal apps, with
+rating and updated date
+11
+.
+Home uses
+colourful
+illustrations and
+CTAs for
+individuals and
+enterprise.
+Course pages
+provide
+programme
+length, skills
+covered and
+update dates.
+pluralsight.com
+Pluralsight
+emphasises
+empowering teams
+with future‑ready
+tech skills; its home
+highlights over
+6,500 courses and
+3,500 hands‑on labs
+covering AI, cloud
+and cybersecurity,
+curated by authors
+with at least
+10 years’ experience
+12
+.
+A pricing update article
+explains the consolidation
+of Pluralsight Skills and
+A Cloud Guru into new
+plans (Complete and
+Everything) and provides
+13
+upgrade details . An
+AI‑translated courses
+article describes
+Pluralsight’s AI translation
+feature that delivers
+multilingual learning in
+Spanish, French and
+14
+German . Another
+article introduces AI
+sandboxes –
+prompt‑engineering
+playgrounds and
+pre‑configured cloud
+sandboxes that let
+learners experiment with
+tools such as GPT and
+15
+cloud AI services .
+Because of
+Cloudflare the
+site relies heavily
+on help‑centre
+articles. Content
+is presented as
+knowledge‑base
+entries with
+collapsible
+sections and
+bullet lists.
+2
+Site Home‑page hook &
+orientation
+Program highlights &
+inner pages Design notes
+nobledesktop.com
+Noble Desktop’s site
+lists categories
+(coding, design,
+business, data) and
+emphasises
+certificates on the
+home page.
+The Generative AI
+Certificate page shows a
+curriculum that covers AI
+for data analytics (tools
+like IBM Watson,
+Google AI, Tableau,
+Microsoft Azure AI),
+includes tuition fees
+(~US $3,495) and available
+16
+schedules . The
+Corporate Digital Skills
+Training page promotes
+onsite or live‑online
+training for AI, Excel,
+Power BI, SQL, Python,
+data science and more
+17
+. The AI classes page
+lists generative‑AI
+offerings: a 78‑hour
+certificate, an 18‑hour “AI
+for Business with ChatGPT
+and Copilot,” and shorter
+workshops, all
+emphasising hands‑on
+projects and practical
+18
+business skills .
+Uses grid layout
+with course
+cards. Each
+programme
+page includes
+schedule tables,
+financing
+options and CTA
+buttons.
+3
+Site Home‑page hook &
+orientation
+Program highlights &
+inner pages Design notes
+bizzuka.com
+Bizzuka’s home
+focuses on closing
+the AI skills gap – it
+states that 86 % of
+workers feel
+inadequately
+trained in AI and
+introduces
+programmes such
+as the
+AI Strategy Canvas,
+Scalable Prompt
+Engineering,
+AI Mastery for
+Business Leaders,
+AI SkillsBuilder and
+Ingrain
+AI Mastermind.
+The AI Strategy Canvas
+page describes a blueprint
+that unifies language
+across departments and
+aligns AI initiatives with
+19
+business objectives .
+Scalable Prompt
+Engineering addresses
+inconsistent prompting
+and provides structured
+frameworks to scale AI use
+20
+across teams . The
+AI Mastery for Business
+Leaders programme
+teaches leaders to use the
+strategy canvas, engineer
+scalable prompts and
+apply AI across HR,
+accounting and customer
+service, promising
+improved efficiency and
+21
+growth .
+Home uses large
+type and
+scroll‑triggered
+sections for each
+programme.
+Each programme
+page follows a
+consistent
+structure:
+challenge
+description,
+solution benefits
+and call‑to‑action
+to schedule a
+consultation.
+4
+Site Home‑page hook &
+orientation
+Program highlights &
+inner pages Design notes
+learnprompting.org
+The site invites
+visitors to “Learn,
+apply & get
+certified in AI,”
+offering courses,
+certifications and
+community access
+22
+.
+The ChatGPT for
+Everyone course is a
+1‑hour self‑paced
+programme taken by
+over 221 k learners; it
+teaches effective use of
+ChatGPT, prompt crafting
+basics, applications and AI
+23
+safety . Pricing tiers
+range from a free plan to
+Plus (US$21/mo), Teams
+(US$25 per seat) and
+custom Enterprise;
+benefits include access to
+a course library, AI
+playground, projects and
+24
+Discord community .
+The For Business page
+markets live workshops,
+on‑demand courses and
+AI transformation
+consulting, helping teams
+use ChatGPT,
+Microsoft Copilot, DALL‑E,
+MidJourney and
+25
+Runway ML .
+Uses a modern,
+scroll‑snapping
+design with
+colourful icons.
+Course pages
+show video
+duration and
+enrolment
+figures, while
+pricing page
+uses tables.
+5
+Site Home‑page hook &
+orientation
+Program highlights &
+inner pages Design notes
+reliablebits.io
+Reliable Bits lists AI
+Development, AI
+Education &
+Training, custom
+software and
+technical
+consulting services
+26
+. The
+AI‑development
+section offers
+strategy and
+planning, model
+selection and
+fine‑tuning, custom
+GPT tooling,
+integration and
+27
+monitoring .
+The AI Education &
+Training page (visual)
+explains that AI isn’t just a
+buzzword; the firm
+teaches teams to
+understand AI in plain
+English, identify
+high‑impact use‑cases and
+build skills via workshops
+and role‑specific training
+28
+. They offer AI literacy
+workshops with practical
+language and interactive
+29
+exercises ,
+role‑specific training
+tailored for product
+managers, marketers and
+30
+operations teams ,
+prompt writing training
+for crafting powerful
+31
+ChatGPT prompts and
+AI tool walkthroughs
+with hands‑on guidance in
+tools like ChatGPT and
+32
+MidJourney .
+Site uses a dark
+colour palette
+with simple
+iconography.
+Service pages
+rely on concise
+paragraphs and
+bullet lists;
+training page
+uses stacked
+cards for each
+workshop.
+6
+Site Home‑page hook &
+orientation
+Program highlights &
+inner pages Design notes
+nwai.co
+NWAI Consulting’s
+home positions it as
+“AI consulting
+services for
+forward‑thinking
+companies” and
+lists solutions across
+strategy,
+development and
+implementation. It
+notes that they have
+50 + enterprise
+clients, 300 +
+small‑business
+clients and a 98 %
+33
+success rate .
+The AI strategy &
+road‑mapping page
+warns that lack of strategy
+leads to wasted
+investments and technical
+debt; it promotes tailored
+roadmaps that maximise
+ROI and competitive
+34
+leadership . The AI
+training & education
+page highlights the
+widening AI skills gap and
+describes programs that
+provide executive
+briefings, hands‑on
+technical training and
+customised curricula;
+benefits include enhanced
+productivity, successful
+implementation,
+employee engagement
+and an innovation culture
+35
+.
+Home uses a
+segmented
+layout listing
+strategy,
+development
+and support
+offerings; each
+inner page uses
+problem/
+solution sections
+with icons. Pages
+emphasise risk
+mitigation and
+ROI.
+7
+generalassemb.ly
+GA’s home
+headlines “The
+global leader in AI
+skills training” and
+says it delivers
+professional AI
+training for
+individuals, teams
+and enterprises with
+hands‑on learning
+36
+. A section called
+“Where AI
+expertise meets
+practical
+application”
+highlights
+learn‑by‑doing,
+professional live
+instruction and AI
+education at any
+37
+scale . It offers
+separate cards for
+companies
+(ready‑to‑deploy
+training modules,
+hands‑on
+workflows, custom
+curriculum,
+tool‑specific
+workshops) and
+individuals (build
+your journey, 50 %
+lab work,
+immediately
+applicable skills,
+market‑driven
+curriculum and
+digital badge)
+38
+39
+.
+The AI Academy page
+notes that AI is infiltrating
+every aspect of work; the
+academy helps employees
+—from leaders to
+practitioners—leverage AI
+through hands‑on,
+40
+customisable training .
+It highlights that 70 % of
+business leaders lack the
+knowledge to use AI
+effectively and 63 % of
+hiring leaders struggle
+to find candidates with
+41
+AI skills . The academy
+offers a three‑stage
+journey: AI‑Enabled
+(foundational skills and
+42
+daily AI tools) ,
+AI‑Augmented (embed AI
+into operations,
+decision‑making and
+ethical implementation)
+43
+, and
+AI‑Superpowered
+(leaders learn to develop,
+deploy and scale advanced
+44
+AI systems) . It defines
+audiences (C‑suite, HR/
+L&D managers, technical
+45
+leaders) , outlines
+implementation steps
+46
+and lists extras such as
+expert speakers,
+post‑training peer groups,
+in‑person delivery,
+industry‑specific content,
+multilingual training and
+AI‑readiness assessments
+47
+. A course catalog
+page lists bootcamps and
+courses such as data
+analytics, data science and
+software‑engineering
+bootcamps, noting
+duration (420–480 hours)
+and delivery options
+48
+(online/on‑campus) .
+The
+Agentic AI Fundamentals
+workshop page describes
+8
+The home page
+uses split‑hero
+layout with CTAs
+for companies/
+individuals. The
+AI Academy
+page is long,
+using headings,
+numbered
+stages and
+statistics. Course
+pages use
+filterable
+catalogues and
+contain
+schedule/price
+details.
+Site Home‑page hook &
+orientation
+Program highlights &
+inner pages Design notes
+a free one‑hour webinar
+that shows how AI agent
+teams solve real
+problems; participants get
+frameworks to assess AI
+readiness and a roadmap
+to implementation
+49
+with live instruction and
+50
+hands‑on practice ; the
+course targets enterprise
+professionals, technical
+and non‑technical team
+members and
+51
+decision‑makers . The
+About page states that
+since 2011 GA has helped
+110 k + alumni launch
+tech careers and hundreds
+of companies build
+diverse talent pipelines,
+and that as part of the
+Adecco Group it aims to
+create a better world of
+52
+work ; another section
+highlights closing the
+global tech skills gap and
+connecting talent with
+companies under
+53
+CEO Daniele Grassi .
+9
+Home page
+promises to “secure
+a mission‑critical
+workforce for the
+AI economy” with
+CTAs for public
+sector and
+54
+enterprises . A
+mid‑page section
+invites visitors to
+Public sector page: hero
+banner encourages
+organisations to “fuel
+workforce development
+and economic growth”
+56
+and invites them to join
+Fortune 500 businesses
+and public‑sector
+organisations. A digital
+skills training section
+urges governments to
+prepare the workforce for
+57
+the AI economy . A
+proven model section
+illustrates how
+Correlation One upskills
+talent: innovative
+talent‑attraction
+programmes, a robust
+employer network and
+Enterprises
+page: headline
+“Train your
+workforce to
+transform your
+business” with
+CTA to talk to
+60
+their team . A
+methodology
+section explains
+that
+Correlation One
+delivers tailored
+ecosystem‑based
+solutions aligned
+to clients’
+maturity and
+builds a
+self‑sustaining
+ecosystem for
+long‑term
+transformation
+in data, AI and
+generative AI
+61
+. Feature
+correlation‑one.com
+transform teams,
+empower citizens or
+improve your skills,
+with cards for public
+sector (create
+economic
+opportunity and
+increase mobility for
+underserved
+55
+communities) ,
+enterprises and
+individuals.
+expert‑led training/
+58
+coaching . Case‑study
+cards describe
+programmes such as
+attracting top cyber
+talent for the U.S.
+Department of Defense
+—working with the DoD to
+address its critical need
+for cybersecurity
+professionals by
+attracting, nurturing and
+developing top‑tier cyber
+59
+talent —and
+partnering with USAID
+to prepare Jordanian
+youth and women for
+STEM careers, which
+provides technical skills,
+career coaching and job
+59
+matching .
+boxes highlight
+delivering
+human‑led,
+cohort‑based
+learning
+journeys
+supported by AI
+coaches,
+facilitating
+team‑based
+capstone
+projects using
+real‑world data,
+and showcasing
+top projects to
+business leaders
+to accelerate AI
+61
+adoption . A
+visual roadmap
+outlines a
+structured
+discovery phase,
+executive
+sessions
+(leadership
+workshops),
+10
+Site Home‑page hook &
+orientation
+Program highlights &
+inner pages Design notes
+DGAI
+innovation
+challenges
+(week‑long
+competitions),
+immersive
+learning &
+capstones and a
+DGAI
+accelerators
+programme that
+develops AI
+champions to
+lead initiatives
+62
+.
+B) Frequency map (design/feature patterns)
+The following high‑level patterns appeared across the analysed sites. “Frequency” counts the number of
+sites (out of 10) where the pattern was observed.
+Feature/pattern Observations (keywords only – no long sentences) Frequency
+Hero tagline
+emphasising AI
+training or
+upskilling
+Phrases like “Executive AI Training,” “Global leader in AI skills
+training,” “Secure a mission‑critical workforce for the AI
+economy,” “Learn, apply & get certified,” and similar hooks on
+1 36 54
+home pages .
+10
+Separate
+pathways for
+companies vs
+individuals
+Most sites present distinct CTAs/landing pages for corporate/
+enterprise training and individual courses (Elevate AI, Udacity,
+Noble Desktop, Bizzuka, Learn Prompting, NWAI,
+36 40 63
+General Assembly, Correlation One) .
+8
+Corporate/
+enterprise
+bootcamps &
+tailored
+programmes
+Multi‑day bootcamps, executive workshops and customised
+programmes targeted at leadership teams (Elevate AI’s 2‑day
+5 19
+bootcamp , Bizzuka’s Strategy Canvas , NWAI’s strategy
+34 40
+road‑mapping , GA’s AI Academy , Correlation One’s
+61
+enterprise methodology ).
+7
+Hands‑on
+projects &
+real‑world tasks
+Emphasis on practical learning via projects, labs or capstone
+37 39
+challenges (GA’s “learn by doing” and 50 % lab work ,
+9 12
+Udacity’s hands‑on projects , Pluralsight’s labs ,
+Noble Desktop’s certificate curriculum 16
+, Correlation One’s
+61
+6
+capstone projects ).
+11
+Feature/pattern Observations (keywords only – no long sentences) Frequency
+Prompt
+engineering
+training
+Dedicated prompt‑engineering workshops or modules appear
+on Elevate AI, Bizzuka (Scalable Prompt Engineering 20
+),
+Learn Prompting (courses on prompt engineering 22
+),
+Reliable Bits (prompt writing training 31
+), General Assembly
+(Agentic AI workshop touches on prompts 49
+) and NWAI
+35
+(training covers prompt engineering ).
+6
+Role‑specific or
+customised
+training
+Many providers offer tailored programmes for different roles or
+departments: Elevate AI differentiates corporate vs individual
+training 3
+; Reliable Bits provides role‑specific modules for
+product managers, marketers and operations 30
+; GA’s academy
+tailors tracks for executives, business teams and technical teams
+66
+; Correlation One customises programmes with executive
+sessions and AI accelerators 62
+; NWAI offers bespoke
+34 21
+road‑maps ; Bizzuka’s programmes target leaders .
+6
+Statistics and
+ROI claims
+Several sites use numbers to build credibility: Elevate AI
+promises ROI within 30 days 5
+; NWAI cites 50 + enterprise
+clients, 98 % success rate 33
+; General Assembly reports 110 k +
+alumni 52
+and includes statistics about leadership knowledge
+41 23
+gaps ; Learn Prompting shows enrolment numbers ;
+Correlation One lists participating companies and states training
+65
+is 100 % free for Amazon associates .
+6
+Free courses or
+webinars
+Free offerings are used as lead magnets: GA’s free one‑hour
+49 24
+Agentic AI webinar , Learn Prompting’s free tier ,
+Pluralsight’s community‑free classes (via free events listing),
+Bizzuka’s free webinars (implied through AI Mastermind),
+Correlation One’s no‑cost programmes for Amazon associates
+65
+, Udacity’s free survival skills series (links on course pages).
+5
+Global or
+multilingual
+reach
+7
+Elevate AI trains in English, Portuguese and Spanish ;
+Pluralsight offers AI‑translated courses in multiple languages
+14 47
+; GA’s extras include language flexibility ; NWAI provides
+global support 33
+; Correlation One lists programmes available
+65
+across several countries and languages .
+5
+Use‑case or
+case‑study
+stories
+Bizzuka’s pages discuss real‑world AI adoption scenarios;
+Reliable Bits shares training use‑cases; NWAI and GA highlight
+success stories; Correlation One’s pages feature detailed case
+59
+studies (DoD, USAID, MinTIC) .
+5
+Multi‑stage
+learning
+journeys
+GA’s three‑stage AI Academy (AI‑Enabled, AI‑Augmented,
+AI‑Superpowered) 67
+; Correlation One’s enterprise journey
+(structured discovery → executive sessions → innovation
+challenges → immersive learning → accelerators) 62
+; NWAI
+emphasises strategy, development and implementation phases
+33
+; Bizzuka’s programmes progress from strategy canvas to
+prompt engineering and mastery; Elevate AI offers bootcamps
+followed by advisory/automation services.
+5
+12
+C) Small‑theme translation
+Across the surveyed sites, a clear Home 03 pattern emerges: each provider positions itself as a
+strategic partner for upskilling in the AI era. The home pages usually start with a bold promise (“global
+leader in AI skills training,” “secure a mission‑critical workforce,” “learn, apply & get certified”) to capture
+attention 36 54
+. Nearly all sites immediately segment their audiences—offering one pathway for
+enterprises/governments and another for individuals—which allows prospects to self‑select and
+38 55
+reduces friction in the user journey .
+Programmes emphasise hands‑on, practical learning: bootcamps involve real‑world projects and
+capstone challenges 37 61 49
+, while workshops teach prompt‑engineering or AI agent workflows .
+Training is often delivered live in small cohorts with professional instructors, reinforced by on‑demand
+resources and post‑course support 37 47
+. Providers stress customisation—offering role‑specific
+modules, flexible scheduling, multiple languages and the ability to scale from a single learner to global
+teams 66
+【975524412938542†L51-L60】. ROI is communicated through statistics, success stories and
+case studies (e.g., DoD cyber talent pipelines 59 52
+or 110 k + GA alumni ), reassuring clients that
+investment in training yields measurable impact.
+Visually, most sites employ clean, modern layouts with large headings, coloured accent blocks and
+alternating dark/light sections. Diagrams or journey maps are used to convey multi‑stage programmes
+(GA’s AI Academy and Correlation One’s DGAI accelerator flow) 67 62
+. Case‑study cards include human
+photos or partner logos to add credibility. Overall, the theme conveys that AI training is not just about
+theory—it’s about building practical skills, aligning them to business goals and empowering both
+individuals and organisations to thrive in the AI‑driven economy.
+1 2
 Elevate AI Consulting - Executive AI Training, AI Strategy, AI Agents, AEO and Automations
 https://www.elevateaiconsulting.com/
-2 3
+3 4
+AI Consulting Services | Elevate AI Consulting - Corporate Training, Process Automation &
+Custom AI Solutions
+https://www.elevateaiconsulting.com/services
+5 6
 Corporate AI Training & Bootcamps | Elevate AI Consulting - 2-Day Executive AI Bootcamp
 https://www.elevateaiconsulting.com/services/bootcamp
-4 5
-Individual AI Workshops | Elevate AI Consulting - Custom AI Training Modules
-https://www.elevateaiconsulting.com/services/workshops
-6 7
+7 8
 About Elevate AI Consulting | Founder Thiago Ferreira - IE Business School Professor & CAIO
 https://www.elevateaiconsulting.com/about-us
-8 9 10
-Executive Leadership Training Courses & Programs | Udacity
-https://www.udacity.com/school/executive-leadership
+9
+Learn the Latest Tech Skills; Advance Your Career | Udacity
+https://www.udacity.com/
+10
+Workforce Transformation & Skills | Udacity for Business
+https://www.udacity.com/enterprise/overview
 11
-Generative AI for Business Leaders | Online Courses, Learning Paths, and Certifications - Pluralsight
-https://www.pluralsight.com/professional-services/data-machine-learning/generative-ai-for-business-leaders
-12 13 14
-Generative AI for leaders: 6 use cases for your organization | Online Courses, Learning
-Paths, and Certifications - Pluralsight
-https://www.pluralsight.com/resources/blog/ai-and-data/generative-ai-for-leaders
-15 16 17 18
-AI Classes NYC or Live Online: Generative AI, ChatGPT, Machine Learning
-https://www.nobledesktop.com/topics/ai-classes
-19 20
+Applied Generative AI Engineering | Udacity Online Course | Udacity
+https://www.udacity.com/course/generative-ai--nd608
+12
+Home | Online Courses, Learning Paths, and Certifications - Pluralsight
+https://www.pluralsight.com/
+13
+Updated plans and pricing – Pluralsight Help Center
+https://help.pluralsight.com/hc/en-us/articles/25222096127508-Updated-plans-and-pricing
+13
+14
+AI-translated courses – Pluralsight Help Center
+https://help.pluralsight.com/hc/en-us/articles/43223430093332-AI-translated-courses
+15
+AI sandboxes – Pluralsight Help Center
+https://help.pluralsight.com/hc/en-us/articles/24564569570580-AI-sandboxes
+16
+Generative AI Certificate in NYC or Online
+https://www.nobledesktop.com/certificates/generative-ai
+17
 Corporate Digital Skills Training: Onsite & Virtual Courses for Employees | Noble Desktop
 https://www.nobledesktop.com/corporate-training
-6
-21 22
+18
+AI Classes NYC or Live Online: Generative AI, ChatGPT, Machine Learning
+https://www.nobledesktop.com/topics/ai-classes
+19
+AI Strategy Canvas® - Bizzuka
+https://www.bizzuka.com/ai-training/ai-strategy-canvas/
+20
+Scalable Prompt Engineering - Bizzuka
+https://www.bizzuka.com/ai-training/scalable-prompt-engineering/
+21
+AI Mastery for Business Leaders - Bizzuka
+https://www.bizzuka.com/ai-training/ai-mastery-for-business-leaders/
+22
 Learn Prompting: Your Guide to Communicating with AI
 https://learnprompting.org/
-23 24
-For Business
-https://learnprompting.org/for-business
-25 26
+23
+ChatGPT for Everyone
+https://learnprompting.org/courses/chatgpt-for-everyone
+24
 Learn Prompting: Your Guide to Communicating with AI
 https://learnprompting.org/pricing
-27 28
+25
+For Business
+https://learnprompting.org/for-business
+26 27
+Reliable Bits - Technology Solutions for Businesses - NYC
+https://reliablebits.io/
+28 29 30 31 32
+[title unknown]
+https://reliablebits.io/services/ai-training
+33
+AI Consulting Services - Northwest AI Consulting
+https://nwai.co/
+34
+AI Strategy Consulting Services - Northwest AI Consulting
+https://nwai.co/solutions/ai-strategy-roadmapping/
+35
 AI Training & Education Services - Northwest AI Consulting
 https://nwai.co/solutions/ai-training-education/
-29
-About Our Experts - Northwest AI Consulting
-https://nwai.co/about/
-30 31 32 33 34
+36 37 38 39
+Tech Training in AI, Coding, Data, & UX | General Assembly
+https://generalassemb.ly/
+40 41 42 43 44 45 46 47 66 67
 AI Education and Upskilling Courses | General Assembly
 https://generalassemb.ly/employers/what-we-teach/ai
-35
-Agentic AI Fundamentals | Three Hour Workshop| General Assembly
-https://generalassemb.ly/students/courses/agentic-ai-fundamentals-workshop
-36
-From AI Panic to an AI Plan: Upskilling for Your Organization
-https://www.correlation-one.com/whitepapers/ai-plan-upskilling-organization
+48
+Courses | General Assembly
+https://generalassemb.ly/students/courses
+49 50 51
+Agentic AI Fundamentals | One Hour Free Class| General Assembly
+https://generalassemb.ly/students/courses/agentic-ai-fundamentals-class
+14
+52 53
+Tech Bootcamp, Training, & Talent Solutions | General Assembly
+https://generalassemb.ly/about
+54 55
+Develop workforce skills for the AI economy - Correlation One
+https://www.correlation-one.com/
+56 57 58 59
+Public sector - Training and job creation solutions | Correlation One
+https://www.correlation-one.com/public-sector
+60 61 62
+Enterprises - Upskilling and career mobility training solutions | Correlation One
+https://www.correlation-one.com/enterprises
+63
+Individuals - Data, digital, cybersecurity training and mentorship | Correlation One
+https://www.correlation-one.com/for-individuals
+64 65
+Individuals - Data, digital, cybersecurity training and mentorship | Correlation One
+https://www.correlation-one.com/individuals
