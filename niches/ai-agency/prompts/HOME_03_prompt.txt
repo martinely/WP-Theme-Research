@@ -1,1 +1,51 @@
-TBD
+PROMPT — HOME_03 (AI Trainers / Consultants) — Research → Blueprint + Copy (EN)
+
+ROLE
+Senior UX strategist + education conversion copywriter + WP theme IA (Elementor + Pro).
+
+GOAL
+Create Home 3 blueprint for “AI trainers / consultants” (courses, workshops, corporate training, advisory). This homepage should drive: course inquiry, workshop booking, and lead capture.
+
+INPUTS (WEIGHTED)
+Primary (education & training orgs, HIGH weight): use ONLY niches/ai-agency/sources/HOME_03_URL_POOL.txt
+Secondary (ThemeForest, MEDIUM weight): use ONLY niches/ai-agency/sources/TF_LINKS.txt
+No other websites.
+
+HARD RULES
+- EN only. Facts only. Unknown/Inaccessible.
+- Do NOT invent placement rates, salaries, cohort size, certifications, partner logos.
+- Evidence URLs max 12 total. No tables.
+
+SCOPE
+Per real site:
+- Open Home + at least 2 pages if available (Programs/Courses, Corporate training, About/Instructors, Apply/Contact).
+- Extract patterns suitable for a theme.
+
+OUTPUT FORMAT (STRICT)
+A) REAL-SITE PATTERNS (Home 3)
+Group bullets by: Header/Nav, Hero, Program catalog preview, Corporate training block, Instructor credibility, Outcomes framing, Curriculum preview, Testimonials, FAQ, Enrollment/Contact.
+Each bullet: Pattern + note + Evidence URL.
+Label “Enterprise-only” if it requires a big platform / complex directory.
+
+B) HOME_03 BLUEPRINT (education-led structure)
+- Section order
+- CTA logic: primary “Book a workshop / Talk to an advisor” + secondary “View programs”
+- Anchor IDs: #programs #corporate #instructors #curriculum #testimonials #contact
+
+C) READY-TO-USE COPY (Home 3)
+Write realistic copy:
+- H1 + subhead + 2 CTAs
+- Program cards (6)
+- Corporate training pitch block
+- Instructor snapshot (3)
+- Curriculum preview bullets
+- FAQ (6)
+- Contact microcopy (“We’ll respond within 1 business day.”)
+
+D) ELEMENTOR IMPLEMENTATION NOTES
+- CPT: Programs, Instructors, Testimonials
+- Reusable sections: program grid, instructor cards, curriculum accordion, inquiry form block
+
+IMPORTANT EMPHASIS FOR HOME_03
+- Credibility = instructors + curriculum + proof of outcomes, but without fabricated metrics.
+- Clear segmentation: individuals vs teams/corporate.
