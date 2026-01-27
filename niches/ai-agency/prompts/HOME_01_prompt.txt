@@ -1,63 +1,91 @@
-PROMPT — HOME_01 (AI Automation / Integration Agency) — Research → Blueprint + Copy (EN)
+PROMPT — HOME_01 (AI Automation / Integration Agency) (Desktop, 1440)
 
-ROLE
-You are a senior UX strategist + conversion copywriter + WordPress theme information architect (Elementor + Elementor Pro). You must output audit-ready findings with evidence.
+Design a premium WordPress theme homepage (desktop only) for an “AI Automation / Integration Agency”.
+This is Home 1 (primary). Goal: conversion-first, trust-first, enterprise-friendly but not corporate-bloated.
+Canvas: 1440w, 12-col grid, container 1200 centered, gutter 24. One frame only (no mobile).
+Builder assumption: Elementor + Elementor Pro only. Use reusable sections + global styles. No “magic” product features.
 
-GOAL
-Create the best-in-class Home 1 blueprint for an “AI Automation / Integration Agency” WordPress theme (flagship homepage). This is the main commercial home that sells services and drives discovery calls.
+STYLE
+- Modern, high-end, confident. Tech-forward but warm (not sterile).
+- One design system shared across all 3 homes: consistent header/footer, typography scale, buttons, card radii, spacing.
+- Distinctiveness: unique hero composition + 1–2 signature UI motifs (e.g., “workflow chips”, subtle diagram lines, restrained gradient accents).
+- Avoid generic AI clichés (robot heads, glowing brains). Prefer abstract systems, real teams, dashboards, integrations.
 
-INPUTS (WEIGHTED)
-Primary (real sites, HIGH weight): use ONLY the URLs from niches/ai-agency/sources/HOME_01_URL_POOL.txt
-Secondary (ThemeForest patterns, MEDIUM weight): use ONLY niches/ai-agency/sources/TF_LINKS.txt
-Do not use any other websites.
+HARD UX RULES
+- No fake metrics. No invented numbers. If a number is needed, use placeholders like “X+”.
+- Primary CTA must be “Book a discovery call” and must route to external scheduling embed/link pattern (modal embed preferred).
+- Secondary CTA: “View automation examples” (scroll to #use-cases).
+- Keep page scannable: short paragraphs, bullet lists, clear modules, strong hierarchy.
 
-HARD RULES
-- EN only.
-- Facts only from visible pages. If not visible: “Unknown”. If blocked: “Inaccessible”.
-- No invented stats, clients, certifications, guarantees, or ROI numbers.
-- Do NOT claim compliance (SOC2, ISO, HIPAA). You may recommend compliance messaging as “Design recommendation”.
-- Provide explicit evidence URLs for key claims (page URLs). Max 12 evidence URLs total; choose the most representative.
-- No tables.
+HEADER (sticky)
+- Left: logo
+- Nav: Services, Use Cases, Process, Industries, Proof, Pricing, Resources, Contact
+- Right: Primary CTA button “Book a discovery call”
+- Small utility link: “Security & compliance” (can be footer too)
 
-SCOPE
-For each real site (HOME_01_URL_POOL):
-- Open Home + at least 2 supporting pages if available (Services/Capabilities, Case studies/Work, About/Team, Contact/Book).
-- Extract patterns that are realistic for small-to-mid agency sites, not enterprise-only.
+HERO (distinct for Home 1)
+- H1: “Automate work. Integrate systems. Ship faster.”
+- Subhead: “We design and deploy AI + workflow automations across your tools—reliably, securely, and with measurable outcomes.”
+- Proof chips (no numbers): “Zapier / Make / n8n”, “OpenAI / Anthropic”, “HubSpot / Salesforce”, “Slack / Google Workspace”
+- CTAs: Primary “Book a discovery call” + Secondary “View automation examples”
+- Visual: abstract workflow diagram or integration map (tasteful, minimal)
 
-OUTPUT FORMAT (STRICT)
-A) REAL-SITE PATTERNS (Home 1)
-- Bullets grouped by sections: Header/Nav, Hero, Proof, Services/Capabilities, Process, Case studies, Industry focus, Tech stack, Team credibility, FAQ/Risk-reversal, Contact/Booking.
-- Each bullet: Pattern + short note + Evidence URL.
-- Label “Enterprise-only” when pattern requires large org assets (massive case study library, many locations, huge teams, partner directories).
+SECTION: Trusted by / logos (optional)
+- Row of logo placeholders + short caption “Teams choose us for reliable delivery”
 
-B) THEMEFOREST CROSS-CHECK (Home 1)
-- 6–10 bullets: which patterns TF themes support well vs fail at (templates, components, content types).
-- If a TF pattern seems marketing-only, label “Marketing claim”.
+SECTION #services: What we do
+Cards (4–6):
+- AI workflow automation
+- System integrations & API glue
+- Internal tools & agents
+- Data pipelines & enrichment
+- Support & monitoring
+Each card: 1-sentence outcome phrasing.
 
-C) HOME_01 BLUEPRINT (final structure)
-Provide a template-friendly homepage structure with:
-- Section order (top to bottom)
-- For each section: purpose, key UI components, recommended content length, primary CTA + secondary CTA
-- Booking rule: primary CTA must lead to external scheduler / contact funnel (no fake calendars).
-- Include anchor IDs for key sections: #services #process #work #industries #about #contact
+SECTION #use-cases: Automation examples (high priority, above the fold-ish)
+Show 6–8 use-case cards with tags:
+- Lead intake → CRM → enrichment → routing
+- Support triage → summarization → ticket creation
+- Finance ops → invoice matching → alerts
+- Sales calls → notes → follow-ups → tasks
+- Recruiting → screening → scheduling
+- Knowledge base → Q&A bot → escalation
+Each card has: “Inputs”, “Automates”, “Result” (no numbers).
 
-D) READY-TO-USE COPY (Home 1)
-Write realistic copy blocks (no numbers you can’t verify):
-- H1 + subhead + 2 CTAs
-- 6 capability cards (short)
-- Process steps (4–5 steps)
-- 3 case study teaser cards (generic placeholders; no fake logos)
-- FAQ (5 Qs)
-- Contact section microcopy (response time: “We’ll respond within 1 business day.”)
+SECTION #process: How we work
+Step timeline (4 steps):
+1) Discovery & success criteria
+2) Map workflows + data access
+3) Build + test + security review
+4) Launch + monitor + iterate
+Microcopy: “Prefer to talk first? (phone placeholder)”
 
-E) COMPONENT LIST (Elementor-friendly)
-List components and CPT ideas needed to implement Home 1:
-- CPT suggestions (Case Studies, Capabilities, Industries)
-- Reusable sections
-- Global tokens (type scale, spacing, radii, shadow)
-Keep it realistic for Elementor + Pro only.
+SECTION: Industries
+Grid of industries (6–10): SaaS, Agencies, eCommerce, Healthcare (non-clinical), Finance, Real estate, Logistics, Education, etc.
+Small disclaimer: “We tailor to your data + compliance needs.”
 
-IMPORTANT EMPHASIS FOR HOME_01
-- Sell outcomes via process + proof (case studies), but without fabricated metrics.
-- Strong “How we work” clarity: discovery → audit → build → deploy → support.
-- Integration/automation trust: security/ops language as recommendations, not claims.
+SECTION #proof: Proof & credibility
+- Case study teaser cards (3) with structure: Problem → Approach → Outcome (no numbers)
+- Testimonials (2–3) with role/company placeholders
+- “Our stack” mini-grid: tools + platforms
+
+SECTION: Pricing
+Two or three tiers:
+- “Starter automation”
+- “Growth systems”
+- “Enterprise program”
+Each: what’s included + “Book a discovery call”
+Microcopy: “Scope varies by systems and access.”
+
+SECTION: FAQ
+6–8 questions focused on delivery, access, security, ownership, maintenance, timelines (no numbers).
+
+SECTION #contact: Contact / booking
+- Booking module: external scheduler embed in modal (primary)
+- Secondary: short “Request a callback” form (name, email, message)
+- Privacy microcopy: “We’ll only use your info to respond.”
+
+FOOTER
+- Sitemap links
+- Security/Privacy, Terms
+- Contact details + social
