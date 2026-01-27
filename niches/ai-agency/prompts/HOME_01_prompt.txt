@@ -1,1 +1,63 @@
-TBD
+PROMPT — HOME_01 (AI Automation / Integration Agency) — Research → Blueprint + Copy (EN)
+
+ROLE
+You are a senior UX strategist + conversion copywriter + WordPress theme information architect (Elementor + Elementor Pro). You must output audit-ready findings with evidence.
+
+GOAL
+Create the best-in-class Home 1 blueprint for an “AI Automation / Integration Agency” WordPress theme (flagship homepage). This is the main commercial home that sells services and drives discovery calls.
+
+INPUTS (WEIGHTED)
+Primary (real sites, HIGH weight): use ONLY the URLs from niches/ai-agency/sources/HOME_01_URL_POOL.txt
+Secondary (ThemeForest patterns, MEDIUM weight): use ONLY niches/ai-agency/sources/TF_LINKS.txt
+Do not use any other websites.
+
+HARD RULES
+- EN only.
+- Facts only from visible pages. If not visible: “Unknown”. If blocked: “Inaccessible”.
+- No invented stats, clients, certifications, guarantees, or ROI numbers.
+- Do NOT claim compliance (SOC2, ISO, HIPAA). You may recommend compliance messaging as “Design recommendation”.
+- Provide explicit evidence URLs for key claims (page URLs). Max 12 evidence URLs total; choose the most representative.
+- No tables.
+
+SCOPE
+For each real site (HOME_01_URL_POOL):
+- Open Home + at least 2 supporting pages if available (Services/Capabilities, Case studies/Work, About/Team, Contact/Book).
+- Extract patterns that are realistic for small-to-mid agency sites, not enterprise-only.
+
+OUTPUT FORMAT (STRICT)
+A) REAL-SITE PATTERNS (Home 1)
+- Bullets grouped by sections: Header/Nav, Hero, Proof, Services/Capabilities, Process, Case studies, Industry focus, Tech stack, Team credibility, FAQ/Risk-reversal, Contact/Booking.
+- Each bullet: Pattern + short note + Evidence URL.
+- Label “Enterprise-only” when pattern requires large org assets (massive case study library, many locations, huge teams, partner directories).
+
+B) THEMEFOREST CROSS-CHECK (Home 1)
+- 6–10 bullets: which patterns TF themes support well vs fail at (templates, components, content types).
+- If a TF pattern seems marketing-only, label “Marketing claim”.
+
+C) HOME_01 BLUEPRINT (final structure)
+Provide a template-friendly homepage structure with:
+- Section order (top to bottom)
+- For each section: purpose, key UI components, recommended content length, primary CTA + secondary CTA
+- Booking rule: primary CTA must lead to external scheduler / contact funnel (no fake calendars).
+- Include anchor IDs for key sections: #services #process #work #industries #about #contact
+
+D) READY-TO-USE COPY (Home 1)
+Write realistic copy blocks (no numbers you can’t verify):
+- H1 + subhead + 2 CTAs
+- 6 capability cards (short)
+- Process steps (4–5 steps)
+- 3 case study teaser cards (generic placeholders; no fake logos)
+- FAQ (5 Qs)
+- Contact section microcopy (response time: “We’ll respond within 1 business day.”)
+
+E) COMPONENT LIST (Elementor-friendly)
+List components and CPT ideas needed to implement Home 1:
+- CPT suggestions (Case Studies, Capabilities, Industries)
+- Reusable sections
+- Global tokens (type scale, spacing, radii, shadow)
+Keep it realistic for Elementor + Pro only.
+
+IMPORTANT EMPHASIS FOR HOME_01
+- Sell outcomes via process + proof (case studies), but without fabricated metrics.
+- Strong “How we work” clarity: discovery → audit → build → deploy → support.
+- Integration/automation trust: security/ops language as recommendations, not claims.
