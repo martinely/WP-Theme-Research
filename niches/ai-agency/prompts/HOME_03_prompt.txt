@@ -1,51 +1,51 @@
-PROMPT — HOME_03 (AI Trainers / Consultants) — Research → Blueprint + Copy (EN)
+PROMPT — HOME_03 (AI Trainers / Consultants) (Desktop, 1440)
 
-ROLE
-Senior UX strategist + education conversion copywriter + WP theme IA (Elementor + Pro).
+Design a premium WordPress theme homepage (desktop only) for “AI Trainers / Consultants”.
+This is Home 3 (secondary). Same global design system as Home 1 (header/footer/tokens), but distinct hero + section order.
+Canvas: 1440w, 12-col grid, container 1200 centered, gutter 24. One frame only (no mobile).
+Builder: Elementor + Elementor Pro only.
 
 GOAL
-Create Home 3 blueprint for “AI trainers / consultants” (courses, workshops, corporate training, advisory). This homepage should drive: course inquiry, workshop booking, and lead capture.
+Sell consulting/training programs with strong credibility, curriculum clarity, and booking CTA.
+No invented stats. Use placeholders where needed.
 
-INPUTS (WEIGHTED)
-Primary (education & training orgs, HIGH weight): use ONLY niches/ai-agency/sources/HOME_03_URL_POOL.txt
-Secondary (ThemeForest, MEDIUM weight): use ONLY niches/ai-agency/sources/TF_LINKS.txt
-No other websites.
+HEADER (same system)
+Nav: Programs, For Teams, For Individuals, Curriculum, Instructors, Resources, Contact
+Primary CTA: “Book a consultation”
 
-HARD RULES
-- EN only. Facts only. Unknown/Inaccessible.
-- Do NOT invent placement rates, salaries, cohort size, certifications, partner logos.
-- Evidence URLs max 12 total. No tables.
+HERO (distinct for Home 3)
+- H1: “Train your team to use AI—safely and effectively.”
+- Subhead: “Hands-on workshops and consulting that translate tools into real workflows, policies, and measurable adoption.”
+- CTAs: Primary “Book a consultation” (external scheduler modal) + Secondary “View programs”
+- Visual: workshop photo placeholder + curriculum cards motif
 
-SCOPE
-Per real site:
-- Open Home + at least 2 pages if available (Programs/Courses, Corporate training, About/Instructors, Apply/Contact).
-- Extract patterns suitable for a theme.
+SECTION: Programs (highest priority)
+3 program cards:
+- “AI Fundamentals for Teams”
+- “Workflow Automation Bootcamp”
+- “Prompting + Evaluation for Business”
+Each: audience, outcomes, format, duration placeholder (“X sessions”), CTA.
 
-OUTPUT FORMAT (STRICT)
-A) REAL-SITE PATTERNS (Home 3)
-Group bullets by: Header/Nav, Hero, Program catalog preview, Corporate training block, Instructor credibility, Outcomes framing, Curriculum preview, Testimonials, FAQ, Enrollment/Contact.
-Each bullet: Pattern + note + Evidence URL.
-Label “Enterprise-only” if it requires a big platform / complex directory.
+SECTION: Delivery formats
+In-person / remote / hybrid; team cohorts; office hours.
 
-B) HOME_03 BLUEPRINT (education-led structure)
-- Section order
-- CTA logic: primary “Book a workshop / Talk to an advisor” + secondary “View programs”
-- Anchor IDs: #programs #corporate #instructors #curriculum #testimonials #contact
+SECTION: Curriculum preview (#curriculum)
+Accordion or modular grid: modules, exercises, templates provided.
 
-C) READY-TO-USE COPY (Home 3)
-Write realistic copy:
-- H1 + subhead + 2 CTAs
-- Program cards (6)
-- Corporate training pitch block
-- Instructor snapshot (3)
-- Curriculum preview bullets
-- FAQ (6)
-- Contact microcopy (“We’ll respond within 1 business day.”)
+SECTION: Instructors (#team)
+2–6 instructor cards: role, expertise, “LinkedIn” placeholder.
 
-D) ELEMENTOR IMPLEMENTATION NOTES
-- CPT: Programs, Instructors, Testimonials
-- Reusable sections: program grid, instructor cards, curriculum accordion, inquiry form block
+SECTION: For Teams (enterprise box)
+Procurement-friendly: SOW-ready, privacy options, internal enablement.
 
-IMPORTANT EMPHASIS FOR HOME_03
-- Credibility = instructors + curriculum + proof of outcomes, but without fabricated metrics.
-- Clear segmentation: individuals vs teams/corporate.
+SECTION: Resources
+Guides, checklists, policy templates (teasers).
+
+SECTION: FAQ
+Common objections: prerequisites, tools supported, policies, recordings, materials.
+
+SECTION: Contact / booking
+Primary: external scheduler modal
+Secondary: request a callback form
+
+FOOTER (same system)
