@@ -1,1 +1,91 @@
-TBD (FIGMA prompt)
+FIGMA-01 — AI Agency Theme (3 Homes) — Desktop only
+
+You are designing a premium WordPress theme with ONE shared design system and THREE distinct homepages:
+- Home 1: AI Automation / Integration Agency (primary)
+- Home 2: AI micro-SaaS product
+- Home 3: AI trainers / consultants
+
+CANVAS
+- Desktop only, 1440w
+- 12-column grid, container 1200 centered, gutter 24
+- Create 3 separate frames: H1 / H2 / H3
+- Use one consistent design system (type scale, spacing, radii, shadows, buttons, forms)
+
+STYLE (premium, not template)
+- Modern, confident, high-end, minimal but with character
+- Strong typography hierarchy, generous whitespace
+- Rounded cards (16) and panels (20), subtle shadows
+- Avoid generic “AI clipart”. Use abstract/technical patterns, tasteful gradients, real-world photos only if needed
+- Accessibility: clear contrast, focus states, readable body text
+
+GLOBAL RULES (shared system, different content)
+- 1 primary CTA + 1 secondary CTA max per home
+- Every strong claim must have a nearby proof slot (logos / metrics / badges / testimonial)
+- Keep nav simple (no mega menus). Support 1 level dropdown max
+- Footer: clean legal + links + social, no enterprise portal complexity
+
+COMPONENT KIT (shared)
+- Header + CTA button
+- Hero (variant per home)
+- Card grid system (services/features/programs)
+- Proof/Trust strip (3 content modes)
+- Testimonial/quote cards (optional per home)
+- CTA band + form
+- Blog/resources teaser (optional)
+
+FRAME 1 — HOME 1 (AI Automation / Integration Agency)
+GOAL: Convert to discovery call / contact.
+NAV: Services, Case Studies, Industries, About, Resources, Contact
+HERO:
+- H1 headline about AI automation/integration outcomes
+- Subhead: practical value, no hype
+- Primary CTA: “Book a discovery call”
+- Secondary CTA: “Explore services”
+- Proof chips under CTA (logos + 1–2 outcome metrics placeholders)
+SECTION ORDER (top → bottom):
+1) Hero + proof chips
+2) Trust strip: client logos + outcomes metrics
+3) Capabilities grid (3–5 cards): Integration, Automation, AI Agents, Data/Analytics, Change Enablement (placeholder)
+4) Methodology stepper (Discover → Design → Build → Integrate → Measure)
+5) Case study teaser cards (2–3) with outcome metric placeholders
+6) Light “Industries / Use-cases” (small grid)
+7) Testimonials (optional, 2–3)
+8) CTA band + contact form (name, email, company, message) + optional calendar embed placeholder
+FOOTER: links + contact + legal
+
+FRAME 2 — HOME 2 (AI micro-SaaS product)
+GOAL: Free signup + demo for enterprise.
+NAV: Product, Pricing, Solutions, Resources, Security, Sign in
+HERO:
+- Headline: clear value proposition (meeting notes / summaries / action items)
+- Primary CTA: “Start free”
+- Secondary CTA: “Request a demo”
+- Small trust note: “Privacy-first / not trained on your data” (placeholder)
+SECTION ORDER:
+1) Hero
+2) Feature stack (3–5): capture → summarize → share → search → automate (placeholder)
+3) Integrations row (Zoom/Meet/Teams/Slack/CRM placeholders)
+4) Trust bar: compliance badges (SOC2/GDPR/HIPAA placeholders) + rating stars placeholder
+5) Use-cases grid (Sales, Recruiting, Product, Customer Success placeholders)
+6) Pricing table (Free / Pro / Business / Enterprise) with monthly/annual toggle (visual only)
+7) Testimonials/quotes + logo wall (light)
+8) CTA band: Start free + demo link
+FOOTER: links + legal + status/security link placeholders
+
+FRAME 3 — HOME 3 (AI trainers / consultants)
+GOAL: Enquiries for corporate training + program exploration.
+NAV: Programs, For Teams, Curriculum, Instructors, Resources, Contact
+HERO:
+- Headline: AI adoption training / executive bootcamps (outcome-led)
+- Primary CTA: “Explore programs”
+- Secondary CTA: “Book a briefing”
+SECTION ORDER:
+1) Hero
+2) Programs overview (3 cards): Executive Bootcamp, Role-based Workshops, Team Enablement (placeholder)
+3) Curriculum modules (tabs or accordion): GenAI basics, Prompting, Agents, Automation workflows, Governance (placeholder)
+4) Who it’s for (roles/industries grid)
+5) Instructor bios (2–4 cards with credentials placeholders)
+6) Outcomes/proof panel (learner count / corporate clients / ROI metrics placeholders)
+7) Pricing (optional): either “Request quote” panel or subscription tiers if needed
+8) CTA band + enquiry form (name, email, team size, goals)
+FOOTER: links + legal
