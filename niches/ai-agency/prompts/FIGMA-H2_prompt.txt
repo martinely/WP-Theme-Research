@@ -1,0 +1,32 @@
+PROMPT — FIGMA (AI Agency Theme) — HOME 2 (AI micro-SaaS product) — Desktop 1440
+
+Design a premium WordPress theme homepage (desktop only) for an “AI micro-SaaS product”.
+This is Home 2 of a 1-theme / 3-home system. Same design system as H1/H3, but distinct layout & messaging.
+Canvas: 1440w, 12-column grid, container 1200 centered, gutters 24. One frame only.
+Style: modern SaaS, crisp, confident, light depth. Avoid gimmicks. Elementor-friendly.
+
+HERO (must feel SaaS):
+- H1: clear product category (e.g., “AI meeting notes, instantly”)
+- Subhead: 1–2 lines benefit + privacy/trust microcopy (placeholders, no claims)
+- CTAs: Primary “Start free”, Secondary “Request a demo”
+- Right side: product UI screenshot placeholder (desktop app)
+- Proof: ratings badges OR customer logo row (placeholders)
+
+SECTION ORDER:
+1) Sticky header (nav: Product, Solutions, Pricing, Resources; right: Start free + Sign in)
+2) Hero
+3) Feature stack (4–6 feature cards or stacked rows)
+4) “How it works” mini row (3 steps, small)
+5) Integrations logo strip (meeting tools + CRM placeholders) + link “See all integrations”
+6) Trust/Security bar (badge placeholders: SOC2/GDPR/HIPAA only as placeholders)
+7) Use-cases grid (6 persona/team cards)
+8) Testimonials/ratings strip (short)
+9) Pricing preview (2–4 plans, monthly/annual toggle visual; Enterprise = Contact sales)
+10) Final CTA band (Start free)
+11) Footer (include privacy/legal links)
+
+COMPONENT RULES:
+- Pricing table must be clean + readable (no giant comparison matrix).
+- Keep sections compact; prioritize above-the-fold clarity.
+- No invented stats or certifications; only placeholders.
+Output: one polished high-fidelity UI frame, header-to-footer.
