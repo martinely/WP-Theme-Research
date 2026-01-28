@@ -1,1 +1,246 @@
-TBD (INNER-02_service_single_prompt.txt)
+PROMPT — INNER-02 (Offering Detail / Service Single / Product Single / Program Single) — AI Agency Theme (3 Homes) (Desktop, 1440)
+
+Design a premium WordPress theme INNER PAGE template (desktop only) for a single offering detail page.
+This is the shared “single” template that must support three modes:
+- Mode A (Home 1): Service Single (AI automation / integration agency)
+- Mode B (Home 2): Product Single (AI micro-SaaS product)
+- Mode C (Home 3): Program Single (AI training / consulting)
+
+CANVAS / GRID
+- Desktop only: 1440w, 12-col grid, 1200px centered container, 24px gutters
+- One frame only (no mobile)
+
+BUILDER
+- Elementor + Elementor Pro only
+- Reusable sections + global styles
+- No “magic” features; do not fake internal schedulers, analytics, or dashboards unless shown as static UI placeholders.
+
+STYLE (shared system)
+- Modern, high-end, confident. Tech-forward but warm.
+- Avoid generic AI clichés (robots, glowing brains).
+- Card radius 16; large panels 20; subtle shadows; calm spacing.
+- One design system shared across all homes.
+
+HARD RULES
+- Do NOT invent numbers, clients, case-study results, awards, or certifications.
+- Placeholders allowed: “X+”, “From $X”, “X weeks”, “Since 20XX”.
+- Do NOT claim SOC2/HIPAA/GDPR compliance unless explicitly provided by the user content. If needed, label as “Optional (if applicable)”.
+- Primary CTA must be contextual:
+  - Mode A: “Book a discovery call” (external scheduler modal embed preferred)
+  - Mode B: “Start free” / “Try it” (links to sign-up)
+  - Mode C: “Book a consultation” (external scheduler modal embed preferred)
+
+URL / TEMPLATE ID
+- Template: INNER-02 Offering Single
+- Suggested slugs:
+  - Mode A: /services/{service}/
+  - Mode B: /products/{product}/
+  - Mode C: /programs/{program}/
+
+GLOBAL HEADER (sticky, shared)
+- Same header system across theme; CTA button label changes by mode
+- Include “Back to all” link in nav or under hero:
+  - “← Back to Services / Products / Programs”
+
+BREADCRUMBS (optional)
+- Home / Services / Service Name (or Products / Programs)
+
+PAGE HERO (above the fold, contextual)
+Layout: left copy, right supporting panel (or visual), consistent across modes.
+
+Shared hero fields:
+- Eyebrow (category tag)
+- H1 (offering name)
+- One-sentence outcome subhead (no numbers)
+- 2 CTAs (primary + secondary)
+- 3–5 “chips” (stack / format / best-for)
+
+Mode A (Service Single) hero copy:
+- Eyebrow: “Service”
+- H1: (Dynamic) e.g., “AI workflow automation”
+- Subhead: “Design, build, and ship reliable automations across your tools—documented, testable, and maintainable.”
+- Chips examples: “Zapier / Make / n8n”, “APIs”, “Security review”, “Handoff docs”
+- Primary: “Book a discovery call” (external scheduler modal)
+- Secondary: “See example workflow” (scroll to #examples)
+
+Right hero panel (Mode A):
+- “What you get” mini list (4 bullets)
+- “Typical engagement” (no numbers; placeholders allowed)
+- “Requirements” (access, stakeholders)
+
+Mode B (Product Single) hero copy:
+- Eyebrow: “Product”
+- H1: (Dynamic) e.g., “Meeting Notes Assistant”
+- Subhead: “Turn meetings into summaries, action items, and follow-ups—without manual busywork.”
+- Chips: “Works with: Zoom / Teams / Meet (placeholders)”, “Export”, “Admin controls”, “Privacy-first (optional)”
+- Primary: “Start free”
+- Secondary: “Request a demo” (link)
+
+Right hero panel (Mode B):
+- “Highlights” (4 bullets)
+- “Integrations” (logo chips)
+- “Security” (Optional if applicable; otherwise a neutral “Data handling” link)
+
+Mode C (Program Single) hero copy:
+- Eyebrow: “Program”
+- H1: (Dynamic) e.g., “Workflow Automation Bootcamp”
+- Subhead: “Hands-on training that turns AI tools into repeatable workflows, templates, and internal playbooks.”
+- Chips: “Audience: Teams”, “Format: Remote / On-site / Hybrid”, “Includes: Templates”, “Prereqs: None (placeholder)”
+- Primary: “Book a consultation” (external scheduler modal)
+- Secondary: “View curriculum” (scroll to #curriculum)
+
+Right hero panel (Mode C):
+- “Program snapshot” (format, audience, duration placeholder “X sessions”)
+- “Deliverables” (playbooks, templates, policy draft)
+- “For teams” procurement note (SOW-ready placeholder)
+
+SECTION #overview (what this is)
+A clean “Overview” section:
+- 2 short paragraphs + bullets
+- Avoid fluff; emphasize outcomes, scope, constraints.
+
+Mode A overview bullets:
+- “Automations mapped from current processes”
+- “Integration points documented”
+- “Monitoring + error handling (optional)”
+- “Ownership + handoff plan”
+
+Mode B overview bullets:
+- “Captures & summarises”
+- “Extracts action items”
+- “Exports to your tools”
+- “Admin controls (placeholder)”
+
+Mode C overview bullets:
+- “Role-relevant workflows”
+- “Exercises + templates”
+- “Internal adoption plan”
+- “Office hours (optional)”
+
+SECTION #deliverables (high clarity)
+A “Deliverables / What’s included” grid (2 columns) with 8–12 items, grouped.
+
+Mode A groups:
+- Strategy: “Workflow map”, “Success criteria”, “Risk review”
+- Build: “Automation flows”, “Integrations”, “QA checklist”
+- Handoff: “Docs”, “Training”, “Runbook”
+- Support (optional): “Monitoring”, “Iteration”
+
+Mode B groups:
+- Core: “Transcripts”, “Summaries”, “Action items”
+- Workflow: “Exports”, “Automations (optional)”
+- Team: “Sharing”, “Permissions (placeholder)”
+- Admin: “Billing”, “SSO (optional)”
+
+Mode C groups:
+- Training: “Curriculum”, “Exercises”, “Live sessions”
+- Assets: “Templates”, “Prompt library”, “Playbooks”
+- Governance: “Policy draft (optional)”, “Risk checklist”
+- Enablement: “Office hours”, “Internal champions plan”
+
+SECTION #process (how it works)
+A stepper/timeline (4 steps) with small microcopy.
+
+Mode A:
+1) Discovery & success criteria
+2) Workflow mapping + access
+3) Build + QA + security review
+4) Launch + monitor + iterate
+
+Mode B:
+1) Connect integrations
+2) Configure preferences
+3) Use daily in meetings/workflows
+4) Review/export/iterate
+
+Mode C:
+1) Assess current workflows
+2) Deliver training + practice
+3) Apply to real use-cases
+4) Embed into policy & routines
+
+SECTION #examples (important)
+Show “Examples” section with cards.
+
+Mode A (required):
+- 3–6 workflow example cards, each has:
+  - Inputs
+  - Automates
+  - Output
+  - “Tools” chips
+No numbers.
+
+Mode B (recommended):
+- “Example outputs” cards:
+  - Summary format (placeholder)
+  - Action items format (placeholder)
+  - Follow-up email draft (placeholder)
+
+Mode C (recommended):
+- “What you’ll build” cards:
+  - A workflow template
+  - A prompt/evaluation rubric
+  - A team playbook outline
+
+SECTION #use-cases (context)
+A concise grid linking to relevant use-cases / industries / teams.
+- Keep it short: 6–9 cards.
+
+SECTION #proof (credibility without fake claims)
+Include a credibility block, but keep placeholders honest:
+- Testimonials (2–3) with role/company placeholders
+- “Case study teaser” (Mode A optional) — Problem / Approach / Outcome (no numbers)
+- Ratings badges (Mode B optional) — only placeholders unless provided
+- Instructor credibility (Mode C): bios + credentials placeholders
+
+SECTION #pricing (optional, must be flexible)
+A pricing/packaging panel with disclaimers:
+- Mode A: “Starter / Growth / Enterprise program” (no hard prices)
+- Mode B: “Free / Pro / Team” (prices optional placeholders)
+- Mode C: “Workshop / Bootcamp / Consulting” (no hard prices)
+Microcopy:
+- “Scope varies by systems and access.” / “Plans vary by team needs.”
+
+SECTION #faq (objections)
+6–10 FAQs tailored by mode (use the same sets as INNER-01 but more specific).
+
+SECTION #cta (final conversion)
+A full-width CTA band + secondary form module.
+
+Mode A CTA:
+- Headline: “Want to see what we’d automate first?”
+- Primary: “Book a discovery call” (external scheduler modal)
+- Secondary: “Request a callback” short form
+- Microcopy: “We’ll respond within 1 business day.”
+
+Mode B CTA:
+- Headline: “Start with one workflow—expand later.”
+- Primary: “Start free”
+- Secondary: “Request a demo”
+
+Mode C CTA:
+- Headline: “Let’s tailor a program to your team.”
+- Primary: “Book a consultation” (external scheduler modal)
+- Secondary: “Request a callback” form
+
+FOOTER (shared)
+- Sitemap, Privacy/Terms, Contact placeholders
+
+ELEMENTOR IMPLEMENTATION NOTES
+- Design the page so it can be assembled with:
+  - Hero section template
+  - Overview section template
+  - Deliverables grid template
+  - Process stepper template
+  - Examples cards template
+  - Proof/testimonial template
+  - Pricing module template (toggleable)
+  - FAQ accordion template
+  - CTA + form template
+- Keep dynamic fields clearly labeled (Title, Subtitle, Chips, Deliverables, Steps, etc.)
+
+OUTPUT EXPECTATION
+Return a single desktop page design (header → footer) showing:
+- Mode A layout with clear content blocks
+- Notes/variants for Mode B and Mode C where copy/labels differ
+- Premium, realistic placeholder text, no invented facts
