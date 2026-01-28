@@ -1,1 +1,208 @@
-TBD (INNER-01_services_prompt.txt)
+PROMPT — INNER-01 (Services / Offerings Index) — AI Agency Theme (3 Homes) (Desktop, 1440)
+
+Design a premium WordPress theme INNER PAGE template (desktop only) for the niche: “AI Automation / Integration Agency” with two additional homepage variants in the same theme:
+- Home 1: AI Automation / Integration Agency (primary)
+- Home 2: AI micro-SaaS products
+- Home 3: AI trainers / consultants
+
+This prompt is for the shared INNER template: Services / Offerings Index.
+It must support three modes via toggles/content:
+- Mode A (Home 1): Agency services (capabilities)
+- Mode B (Home 2): Product suite index (micro-SaaS products)
+- Mode C (Home 3): Training programs index (courses/workshops/consulting)
+
+CANVAS / GRID
+- Desktop only: 1440w, 12-col grid, 1200px centered container, 24px gutters
+- One frame only (no mobile, no toggle)
+
+BUILDER ASSUMPTION
+- Elementor + Elementor Pro
+- Reusable sections + global tokens
+- No fake data. No invented metrics/clients/certifications.
+
+STYLE (shared system)
+- Modern, high-end, confident. Tech-forward but warm.
+- Avoid AI clichés (robots/brains). Use abstract systems, real people, subtle diagrams.
+- Card radius 16; large panels 20; soft shadows; generous whitespace.
+
+HARD RULES
+- Do NOT invent numbers, “X+ clients”, awards, logos, certifications, or timelines.
+- Placeholders allowed: “X+”, “From $X”, “X weeks”, “Since 20XX”.
+- Services page must be scannable: short paragraphs, bullets, clear sections.
+- Primary CTA must be contextual:
+  - Mode A: “Book a discovery call” (external scheduler modal)
+  - Mode B: “Try a product”
+  - Mode C: “Book a consultation” (external scheduler modal)
+
+URL / TEMPLATE ID
+- Template: INNER-01 Services / Offerings
+- Suggested slug(s):
+  - Mode A: /services/
+  - Mode B: /products/
+  - Mode C: /programs/ (or /training/)
+
+GLOBAL HEADER (sticky, shared)
+- Same header system as Home prompts; contextual nav emphasis per mode
+- Right CTA button matches mode
+
+BREADCRUMBS (optional)
+- Home / Services (or Products / Programs)
+
+PAGE HERO (contextual)
+Use a hero variant that changes headline/subhead by mode, but keeps layout consistent.
+
+Mode A (Agency Services) hero:
+- H1: “Services built for reliable AI delivery.”
+- Subhead: “Automation, integrations, and AI systems that fit your tools, data access, and risk profile.”
+- CTAs: Primary “Book a discovery call” + Secondary “View automation examples” (link to Use Cases page or #use-cases)
+- Right “Quick fit” box (no numbers):
+  - “Best for: Ops-heavy teams”
+  - “Works with: Your existing stack”
+  - “Deliverables: Docs + handoff”
+  - “Support: Optional monitoring”
+
+Mode B (Product Suite) hero:
+- H1: “Focused AI tools for specific jobs.”
+- Subhead: “Pick one product or bundle the suite—built to plug into your daily workflows.”
+- CTAs: Primary “Try a product” + Secondary “See integrations”
+
+Mode C (Programs / Training) hero:
+- H1: “Programs that turn AI into repeatable workflows.”
+- Subhead: “Hands-on training and consulting for teams adopting AI responsibly.”
+- CTAs: Primary “Book a consultation” + Secondary “View curriculum” (#curriculum)
+
+SECTION #filters (high priority)
+A compact, premium filter/sort bar that works for all modes.
+- Search input (placeholder: “Search services / products / programs…”)
+- Filter chips (contextual):
+  - Mode A: Automation, Integrations, Data, AI Agents, Enablement, Support
+  - Mode B: Notes, Meetings, Summaries, Automation add-ons, Admin
+  - Mode C: Exec, Teams, Individuals, Workshops, Bootcamps, Consulting
+- Sort dropdown: “Recommended”, “Most popular”, “Newest” (labels only)
+
+SECTION #featured (high priority)
+Show 3 featured offerings (cards) with slightly larger layout (image/illustration + bullets).
+Card structure (shared):
+- Title
+- One-line outcome promise (no metrics)
+- 3 bullets: “What you get”
+- “Best for” chips (2–3)
+- CTA button:
+  - Mode A: “Explore service”
+  - Mode B: “View product”
+  - Mode C: “View program”
+- Secondary link: “See details”
+
+SECTION #grid (main index)
+A grid of 6–12 offerings (cards), reusable across modes.
+Each card includes:
+- Icon or tiny abstract motif
+- Title + short description (1–2 lines)
+- “Includes” mini list (2–3 bullets)
+- Optional “Integrates with / Format / Deliverables” line (contextual)
+- CTA: “View” (links to inner detail template)
+
+MODE-SPECIFIC CARD CONTENT (examples, placeholders; do not claim facts)
+
+Mode A (Agency) suggested categories:
+- “AI workflow automation”
+- “System integrations & API glue”
+- “Internal tools & AI assistants”
+- “Data pipelines & enrichment”
+- “Quality, testing & observability”
+- “Support & monitoring”
+Optional “packaged” cards (no prices, no timelines):
+- “Automation audit (starter)”
+- “Pilot build (proof of value)”
+- “Ongoing program (retainer)”
+
+Mode B (Micro-SaaS) product card fields:
+- “Use cases” chips (Sales / Support / Ops / Recruiting)
+- “Integrations” chips (Zoom/Teams/Meet placeholders)
+- “Plan” label (Free/Pro/Team placeholders)
+
+Mode C (Training) program card fields:
+- Audience chips (Exec / Teams / Individuals)
+- Format chips (Remote / On-site / Hybrid)
+- Duration placeholder (“X sessions”)
+- “What you’ll practice” (2 bullets)
+
+SECTION #comparison (optional but premium)
+A “Compare” module that can be toggled on/off.
+- Mode A: Compare service packages (Starter / Growth / Enterprise program)
+- Mode B: Compare plans (Free / Pro / Team)
+- Mode C: Compare program types (Workshop / Bootcamp / Consulting)
+Rules:
+- No real prices required; placeholders allowed
+- Keep features list short (6–10 rows)
+- CTA per column contextual
+
+SECTION #use-cases (strong for A and B; optional for C)
+- A: “Automation examples” — 6–8 cards with structure:
+  - Inputs / Automates / Result (no numbers)
+- B: “How teams use the tools” — grouped chips by team; link to use-case pages
+- C: “What teams achieve” — outcomes phrasing without metrics
+
+SECTION #faq (reduce friction)
+6–10 FAQs, varying by mode:
+
+Mode A FAQs:
+- “What access do you need to start?”
+- “Do you work with our existing tools?”
+- “How do you handle security and permissions?”
+- “Who owns the automation once delivered?”
+- “What does support look like?”
+- “Do you provide documentation?”
+
+Mode B FAQs:
+- “Is there a free plan?”
+- “Which meeting platforms do you support?”
+- “Can we export data?”
+- “How do you handle privacy?”
+- “How does billing work?”
+- “Can I cancel anytime?”
+
+Mode C FAQs:
+- “Do we need technical background?”
+- “Do you train on our real workflows?”
+- “What tools do you cover?”
+- “Do you provide templates/materials?”
+- “Can it be delivered in-person?”
+- “How do we engage for teams?”
+
+SECTION #cta (conversion, contextual)
+A premium CTA band + a secondary form block.
+
+Mode A CTA:
+- Headline: “Ready to automate your next workflow?”
+- Primary: “Book a discovery call” (external scheduler modal)
+- Secondary: “Request a callback” mini form
+- Microcopy: “We’ll reply within 1 business day.”
+
+Mode B CTA:
+- Headline: “Pick one tool—or bundle the suite.”
+- Primary: “Try a product”
+- Secondary: “Contact sales” (link)
+- Microcopy: “No invented claims; keep generic.”
+
+Mode C CTA:
+- Headline: “Let’s design a program for your team.”
+- Primary: “Book a consultation” (external scheduler modal)
+- Secondary: “Request a callback” mini form
+
+FOOTER (shared)
+- Sitemap, Privacy/Terms, Contact placeholders
+
+ELEMENTOR TEMPLATE NOTES (implementation-friendly)
+- Offerings should be implemented via:
+  - Mode A: Services CPT (optional) OR a repeater-driven section template (supported)
+  - Mode B: Products CPT (optional) OR repeaters (supported)
+  - Mode C: Programs/Courses CPT (optional) OR repeaters (supported)
+- Use one card component with conditional fields (chips/labels) per mode
+- Filter bar can be visual-only in design; implementation can be Elementor taxonomy filters or manual anchors later
+
+OUTPUT EXPECTATION
+Return a single desktop page design (header → footer) with:
+- One shared structure + mode-specific copy blocks and labels
+- Premium spacing, scannable hierarchy, realistic placeholder copy
+- No invented facts, numbers, or certifications
