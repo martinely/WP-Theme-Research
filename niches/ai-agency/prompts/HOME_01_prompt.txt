@@ -1,91 +1,105 @@
-PROMPT — HOME_01 (AI Automation / Integration Agency) (Desktop, 1440)
-
 Design a premium WordPress theme homepage (desktop only) for an “AI Automation / Integration Agency”.
-This is Home 1 (primary). Goal: conversion-first, trust-first, enterprise-friendly but not corporate-bloated.
+This is Home 1 (primary). Goal: conversion-first, trust-first, enterprise-friendly (credible), not corporate-bloated.
 Canvas: 1440w, 12-col grid, container 1200 centered, gutter 24. One frame only (no mobile).
-Builder assumption: Elementor + Elementor Pro only. Use reusable sections + global styles. No “magic” product features.
+Builder assumption: Elementor + Elementor Pro only. Reusable sections + global styles.
 
-STYLE
-- Modern, high-end, confident. Tech-forward but warm (not sterile).
-- One design system shared across all 3 homes: consistent header/footer, typography scale, buttons, card radii, spacing.
-- Distinctiveness: unique hero composition + 1–2 signature UI motifs (e.g., “workflow chips”, subtle diagram lines, restrained gradient accents).
-- Avoid generic AI clichés (robot heads, glowing brains). Prefer abstract systems, real teams, dashboards, integrations.
+STYLE (shared design system across all 3 homes)
+	•	Modern, high-end, confident. Tech-forward but warm (not sterile).
+	•	Avoid AI clichés (robots/brains). Prefer abstract systems, real teams, integration diagrams, dashboard-like UI.
+	•	Signature motifs (use 1–2): “workflow chips”, subtle diagram lines/arrows, restrained gradient accent (minimal).
+	•	Components: soft cards, clear hierarchy, generous whitespace, crisp typography.
 
-HARD UX RULES
-- No fake metrics. No invented numbers. If a number is needed, use placeholders like “X+”.
-- Primary CTA must be “Book a discovery call” and must route to external scheduling embed/link pattern (modal embed preferred).
-- Secondary CTA: “View automation examples” (scroll to #use-cases).
-- Keep page scannable: short paragraphs, bullet lists, clear modules, strong hierarchy.
+HARD RULES
+	•	No invented metrics. No numbers. If needed: “X+”.
+	•	Primary CTA must be “Book a discovery call” → external scheduling (modal embed preferred).
+	•	Secondary CTA: “View automation examples” → scroll to #use-cases.
+	•	Keep copy scannable: short paragraphs, bullets, consistent card patterns.
 
 HEADER (sticky)
-- Left: logo
-- Nav: Services, Use Cases, Process, Industries, Proof, Pricing, Resources, Contact
-- Right: Primary CTA button “Book a discovery call”
-- Small utility link: “Security & compliance” (can be footer too)
+	•	Logo (left)
+	•	Nav: Services, Use Cases, Process, Industries, Proof, Pricing, Resources, Contact
+	•	Right CTA button: “Book a discovery call”
+	•	Utility link: “Security & compliance”
 
-HERO (distinct for Home 1)
-- H1: “Automate work. Integrate systems. Ship faster.”
-- Subhead: “We design and deploy AI + workflow automations across your tools—reliably, securely, and with measurable outcomes.”
-- Proof chips (no numbers): “Zapier / Make / n8n”, “OpenAI / Anthropic”, “HubSpot / Salesforce”, “Slack / Google Workspace”
-- CTAs: Primary “Book a discovery call” + Secondary “View automation examples”
-- Visual: abstract workflow diagram or integration map (tasteful, minimal)
+HERO (distinct H1 composition)
+	•	H1: “Automate work. Integrate systems. Ship faster.”
+	•	Subhead: “We design and deploy AI + workflow automation across your tools—reliably, securely, and built for real operations.”
+	•	Proof chips (no claims): “Zapier / Make / n8n” · “OpenAI / Anthropic” · “HubSpot / Salesforce” · “Slack / Google Workspace”
+	•	CTAs: Primary “Book a discovery call” (modal scheduler) + Secondary “View automation examples”
+	•	Visual: minimal integration map / workflow diagram (nodes + connectors) + tiny “workflow chips” as labels.
 
-SECTION: Trusted by / logos (optional)
-- Row of logo placeholders + short caption “Teams choose us for reliable delivery”
+SECTION: Trusted by (optional)
+	•	Logo row placeholders + caption: “Teams choose us for reliable delivery.”
 
-SECTION #services: What we do
-Cards (4–6):
-- AI workflow automation
-- System integrations & API glue
-- Internal tools & agents
-- Data pipelines & enrichment
-- Support & monitoring
-Each card: 1-sentence outcome phrasing.
+SECTION #services: What we do (4–6 cards)
+Card format: Title + 1 sentence outcome + “What’s included” mini bullets.
+	1.	AI workflow automation — “Reduce handoffs and manual ops across teams.”
+Bullets: triggers/routers, approvals, notifications, exception paths
+	2.	Systems integration & API glue — “Connect tools so data moves cleanly.”
+Bullets: APIs/webhooks, iPaaS scenarios, event pipelines
+	3.	Internal tools & agents — “Assist teams inside the systems they already use.”
+Bullets: copilots, retrieval + Q&A, guardrails + evals
+	4.	Data enrichment & readiness — “Make inputs usable for automation and AI.”
+Bullets: normalization, entity extraction, dedupe, enrichment
+	5.	Monitoring & iteration — “Keep automations stable as systems change.”
+Bullets: logging, alerts, quality checks, continuous improvement
 
-SECTION #use-cases: Automation examples (high priority, above the fold-ish)
-Show 6–8 use-case cards with tags:
-- Lead intake → CRM → enrichment → routing
-- Support triage → summarization → ticket creation
-- Finance ops → invoice matching → alerts
-- Sales calls → notes → follow-ups → tasks
-- Recruiting → screening → scheduling
-- Knowledge base → Q&A bot → escalation
-Each card has: “Inputs”, “Automates”, “Result” (no numbers).
+SECTION #use-cases: Automation examples (high priority; near top)
+Grid 6–8 cards. Each card has: Inputs / Automates / Result (no numbers).
+A) Lead intake → Inputs: form + email / Automates: enrich → route → CRM create / Result: “Faster follow-up, cleaner pipeline.”
+B) Support triage → Inputs: tickets + chat / Automates: summarize → classify → assign / Result: “Less queue noise, clearer handoffs.”
+C) Finance ops → Inputs: invoices + POs / Automates: match → flag exceptions → notify / Result: “Fewer surprises, better control.”
+D) Sales calls → Inputs: meeting audio / Automates: notes → follow-ups → tasks / Result: “Consistent next steps, less admin.”
+E) Recruiting → Inputs: applicants / Automates: screen → schedule → update ATS / Result: “Smoother candidate flow.”
+F) Knowledge assistant → Inputs: docs + FAQs / Automates: answer → cite → escalate / Result: “Better self-serve, safer escalation.”
+(Optionals: onboarding ops, inventory alerts, compliance routing)
 
-SECTION #process: How we work
-Step timeline (4 steps):
-1) Discovery & success criteria
-2) Map workflows + data access
-3) Build + test + security review
-4) Launch + monitor + iterate
-Microcopy: “Prefer to talk first? (phone placeholder)”
+SECTION #process: How we work (4-step timeline)
+	1.	Discovery & success criteria — “Define what ‘good’ looks like.”
+	2.	Workflow + data mapping — “Inputs, systems, permissions, edge cases.”
+	3.	Build + test + security review — “Staging, QA, access controls.”
+	4.	Launch + monitor + iterate — “Observability + continuous improvement.”
+Microcopy under CTA: “Prefer to talk first? (phone placeholder)”
 
-SECTION: Industries
-Grid of industries (6–10): SaaS, Agencies, eCommerce, Healthcare (non-clinical), Finance, Real estate, Logistics, Education, etc.
-Small disclaimer: “We tailor to your data + compliance needs.”
+SECTION: Industries (grid 6–10)
+SaaS · Agencies · eCommerce · Healthcare (non-clinical ops) · Finance · Real estate · Logistics · Education · Professional services
+Disclaimer line: “We tailor to your data, access, and compliance needs.”
 
 SECTION #proof: Proof & credibility
-- Case study teaser cards (3) with structure: Problem → Approach → Outcome (no numbers)
-- Testimonials (2–3) with role/company placeholders
-- “Our stack” mini-grid: tools + platforms
+	•	Case studies (3 cards): Problem → Approach → Outcome (no numbers)
+Example headings:
+	1.	“From manual routing to reliable workflow automation”
+	2.	“Integrations that removed spreadsheet ops”
+	3.	“Assistive agent that improved internal response quality”
+	•	Testimonials (2–3): quote + name/role placeholders (no logos required)
+	•	“Our stack” mini-grid: Integration / Data / AI / Observability tool chips (generic)
 
-SECTION: Pricing
-Two or three tiers:
-- “Starter automation”
-- “Growth systems”
-- “Enterprise program”
-Each: what’s included + “Book a discovery call”
+SECTION: Pricing (2–3 tiers; no numbers)
 Microcopy: “Scope varies by systems and access.”
+Tier 1: Starter automation — “One high-impact workflow, shipped safely.”
+Tier 2: Growth systems — “Multiple workflows + integrations across teams.”
+Tier 3: Enterprise program — “Ongoing delivery + governance + monitoring.”
+Each tier: bullets “Best for / Includes / You get” + CTA “Book a discovery call”.
 
-SECTION: FAQ
-6–8 questions focused on delivery, access, security, ownership, maintenance, timelines (no numbers).
+SECTION: FAQ (6–8; practical + trust)
+	•	“What access do you need to integrate our tools?”
+	•	“How do you handle security and data boundaries?”
+	•	“Do you build in our stack or yours?”
+	•	“Who owns the workflows and assets after delivery?”
+	•	“How do you handle changes when tools update?”
+	•	“Can we start small and expand later?”
+	•	“What do you need from our team to move fast?”
+	•	“Do you support ongoing maintenance and monitoring?”
 
 SECTION #contact: Contact / booking
-- Booking module: external scheduler embed in modal (primary)
-- Secondary: short “Request a callback” form (name, email, message)
-- Privacy microcopy: “We’ll only use your info to respond.”
+	•	Primary: “Book a discovery call” → external scheduler modal embed
+	•	Secondary: Request a callback form (name, email, message)
+	•	Privacy microcopy: “We’ll only use your info to respond.”
 
 FOOTER
-- Sitemap links
-- Security/Privacy, Terms
-- Contact details + social
+	•	Sitemap + Security/Privacy/Terms
+	•	Contact details + social
+
+NOTES
+	•	Use anchor IDs exactly: #services #use-cases #process #proof #contact
+	•	Keep visuals premium and understated; prioritize clarity and trust.
