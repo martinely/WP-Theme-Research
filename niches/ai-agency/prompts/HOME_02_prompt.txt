@@ -1,52 +1,206 @@
 PROMPT — HOME_02 (AI micro-SaaS Products) (Desktop, 1440)
 
 Design a premium WordPress theme homepage (desktop only) for an “AI micro-SaaS products” brand.
-This is Home 2 (secondary). Same global design system as Home 1 (header/footer/tokens), but distinct hero + section order.
+This is Home 2 (secondary). Use the SAME global design system as Home 1 (typography, spacing, buttons, card radii, header/footer), but a DISTINCT hero composition and section order.
 Canvas: 1440w, 12-col grid, container 1200 centered, gutter 24. One frame only (no mobile).
-Builder: Elementor + Elementor Pro only.
+Builder: Elementor + Elementor Pro only. Reusable sections + global styles. No “magic” fake product features.
 
 GOAL
-Product-led clarity: show product suite, outcomes, integrations, and start CTA.
-No invented metrics. Use placeholders where needed.
+Product-led clarity: communicate what the suite is, who it’s for, how it plugs into existing tools, and drive to a trial.
+No invented metrics. If a number is needed, use placeholders like “X+”, “XX%”, “#”. Avoid “best”, “revolutionary” without proof slots.
 
-HEADER (same as Home 1)
-Nav can shift emphasis: Products, Use Cases, Integrations, Pricing, Docs, Blog, Contact
+STYLE
+Modern, high-end, product-forward. Confident, not corporate-bloated. Clean surfaces, generous whitespace.
+Avoid cliché AI imagery (robots/brains). Use realistic UI tiles, subtle diagram lines, restrained gradient accents, and crisp iconography.
+Use 1–2 signature motifs from the shared system (e.g., “workflow chips”, “integration connectors”, “micro-cards with subtle border glow”), but keep it tasteful.
 
-HERO (distinct for Home 2)
-- H1: “Small AI tools that remove daily friction.”
-- Subhead: “A suite of focused micro-SaaS products—meeting notes, workflow assistants, and automation add-ons that plug into your stack.”
-- CTAs: Primary “Try a product” (scroll to products) + Secondary “See integrations”
-- Visual: product tiles / dashboard previews (realistic, not generic)
+HARD UX RULES
+- Primary CTA: “Try for free” (routes to sign-up or pricing section). No fake checkout.
+- Secondary CTA: “See integrations” (scroll to #integrations).
+- Always provide a nearby trust slot: ratings/compliance/badges/logos/testimonials (placeholders ok, no fake claims).
+- Keep scannable: short paragraphs, bullets, consistent card patterns.
 
-SECTION: Product suite (highest priority)
-3–6 product cards, each with:
-- Name + 1-line promise
-- “Best for” tags
-- Key features bullets (3–5)
-- CTA: “View product” (links to product page template)
+ANCHORS (annotate small): #products #use-cases #integrations #how-it-works #pricing #proof #faq #contact
 
-SECTION: Use cases
-8–10 chips grouped by team: Sales, Support, Ops, Recruiting, Founders
+HEADER (sticky — same system as Home 1)
+Left: Logo
+Nav: Products, Use cases, Integrations, Pricing, Docs, Blog, Contact
+Right: Primary button “Try for free”
+Utility link (small): “Security” (to #proof or footer link)
 
-SECTION: Integrations
-Logo grid + short text: “Connect in minutes.” (No false claims)
+HERO (distinct for Home 2 — product suite)
+Layout: split hero with left copy + right “product tiles” panel (3–4 tiles) that look like real UI cards.
+H1: “Small AI tools that remove daily friction.”
+Subhead: “A suite of focused micro-products for meetings, follow-ups, and lightweight automations—designed to plug into your stack in minutes.”
+CTAs:
+- Primary: “Try for free” (scroll to #pricing or open a simple sign-up modal placeholder)
+- Secondary: “See integrations” (scroll to #integrations)
+Micro-proof row (chips, no numbers):
+- “Works with Zoom / Meet / Teams”
+- “Exports to Docs / Notion / CRM”
+- “Admin controls for teams”
+- “Privacy-first defaults”
+Right visual panel:
+- Tile 1: “Meeting Notes” (mini preview: agenda → summary → action items)
+- Tile 2: “Follow-up Writer” (mini preview: email draft chips)
+- Tile 3: “Pipeline Helper” (mini preview: enrichment + routing)
+- Tile 4 (optional): “Call Library” (mini preview: search + highlights)
 
-SECTION: How it works
-Simple 3 steps: Connect → Configure → Run
-Include “Data & privacy” link.
+SECTION #products — Product suite (highest priority)
+Headline: “Pick one tool—or bundle the suite.”
+Subhead: “Start with a single workflow, then add more as your team adopts it.”
+Cards (4–6) — each card includes: name, 1-line promise, “Best for” tags, 4 bullets, CTA.
+Product Card 1 — “Notes”
+- Promise: “Accurate meeting notes with clean action items.”
+- Best for tags: Sales calls • Standups • Customer interviews
+- Bullets:
+  - “Auto summaries + decision capture”
+  - “Action items with owners”
+  - “Highlights + searchable moments”
+  - “Export to Docs / Notion”
+- CTA: “View Notes product”
+Product Card 2 — “Follow-ups”
+- Promise: “Turn meetings into crisp follow-ups in seconds.”
+- Best for tags: Sales • Customer success • Recruiting
+- Bullets:
+  - “Email + Slack drafts”
+  - “Tone presets (friendly / concise / formal)”
+  - “Next-step checklist”
+  - “Templates per team”
+- CTA: “View Follow-ups product”
+Product Card 3 — “Briefs”
+- Promise: “Convert messy inputs into clear internal briefs.”
+- Best for tags: Ops • Product • Agencies
+- Bullets:
+  - “Structured brief formats”
+  - “Missing-info prompts”
+  - “Approval-ready outputs”
+  - “Shareable links”
+- CTA: “View Briefs product”
+Product Card 4 — “Assist”
+- Promise: “Micro-automations that connect your tools.”
+- Best for tags: Founders • Ops • RevOps
+- Bullets:
+  - “Trigger → transform → route”
+  - “Lightweight enrichment steps”
+  - “Error alerts & retries (basic)”
+  - “Audit trail export”
+- CTA: “View Assist product”
+Product Card 5 (optional) — “Library”
+- Promise: “Your team’s searchable knowledge from calls & docs.”
+- Best for tags: Enablement • Support • Research
+- Bullets:
+  - “Topic tagging + highlights”
+  - “Fast search”
+  - “Collections by project”
+  - “Permissioned sharing”
+- CTA: “View Library product”
 
-SECTION: Pricing
-Simple monthly/annual toggle (visual only, no real prices required).
-Tier cards: Free / Pro / Team (placeholders ok).
+SECTION #use-cases — Use cases by team (chips + mini panels)
+Headline: “Use cases teams ship this week.”
+Layout: row of team tabs or grouped chip clusters.
+Team groups with 6–8 chips each (keep total 12–18 visible; rest behind “View more”):
+Sales:
+- “Call → notes → CRM update”
+- “Next steps → follow-up email”
+- “Account brief from last 5 calls”
+Support:
+- “Ticket summary → reply draft”
+- “Escalation handoff notes”
+- “Bug report from conversation”
+Ops:
+- “Invoice / request triage”
+- “Internal brief from Slack thread”
+- “Daily digest from updates”
+Recruiting:
+- “Interview notes → scorecard”
+- “Candidate summary”
+- “Scheduling follow-ups”
+Founders:
+- “Weekly priorities digest”
+- “Customer insights rollup”
+- “Investor update draft”
+Add 2 mini panels below chips:
+Panel A: “Typical inputs” (Meeting audio, notes, docs, CRM fields)
+Panel B: “Typical outputs” (Summary, tasks, drafts, updates)
 
-SECTION: Social proof
-Testimonials + mini case snippets (no numbers).
+SECTION #integrations — Integrations (high trust + clarity)
+Headline: “Connect in minutes.”
+Subhead: “Works alongside the tools you already use—no platform migration.”
+Logo grid (placeholders): Zoom, Google Meet, Microsoft Teams, Slack, Google Workspace, Notion, HubSpot, Salesforce, Jira, Asana, Zapier/Make/n8n.
+Microcopy note: “Integration availability varies by plan.” (no claims)
 
-SECTION: FAQ
-Product concerns: setup, security, billing, export, cancellation.
+SECTION #how-it-works — How it works (simple, product-led)
+Headline: “A simple loop: connect → configure → run.”
+3 steps, each with 2 bullets:
+1) Connect
+- “Authorize your tools”
+- “Choose where outputs go”
+2) Configure
+- “Pick templates and tone”
+- “Set routing rules (basic)”
+3) Run
+- “Get summaries, drafts, and updates”
+- “Review + export anytime”
+Inline link: “Data & privacy” (scrolls to #proof)
 
-SECTION: CTA
-Banner: “Pick one tool or bundle the suite.”
-Primary CTA: “Try a product”
+SECTION #pricing — Pricing (visual clarity; placeholders OK)
+Headline: “Plans that scale from solo to teams.”
+Toggle: Monthly / Annual (visual only)
+Plan cards (3):
+Free
+- “Core summaries”
+- “Exports (basic)”
+- “Limited history”
+CTA: “Start free”
+Pro
+- “Templates + tone presets”
+- “Integrations pack”
+- “Longer history”
+CTA: “Try Pro”
+Team
+- “Admin controls”
+- “Shared templates”
+- “Priority support”
+CTA: “Contact sales” (or “Start Team trial” — pick one; prefer “Contact sales” if you want enterprise feel)
+Microcopy: “Prices shown are placeholders in the theme demo.”
+
+SECTION #proof — Trust & proof (don’t overdo; make it configurable)
+Headline: “Built for teams that care about reliability.”
+Three columns / cards:
+Card 1 — Security posture
+- Bullets (no claims): “Encryption in transit & at rest (placeholder)”, “Access controls”, “Data retention settings”
+Card 2 — Compliance (optional)
+- Badge placeholders: “SOC 2”, “GDPR”, “HIPAA” (only as placeholders; do NOT claim compliance)
+Microcopy: “Badges shown as placeholders—replace with your verified status.”
+Card 3 — Social proof
+- Rating placeholder row: “★★★★★ from # reviews”
+- Logo strip placeholders: “Customer logos”
+Add 2 testimonial cards below (short quotes, role/company placeholders):
+- Quote 1: “We finally leave meetings with clean next steps.”
+- Quote 2: “Setup took minutes—outputs go exactly where we work.”
+
+SECTION #faq — FAQ (objection handling)
+6–8 questions, concise answers (2–3 lines each):
+1) “Does it work with my meeting platform?”
+2) “How do you handle privacy and data retention?”
+3) “Can I control what gets exported and where?”
+4) “What happens if the summary is wrong?”
+5) “Can I cancel or switch plans anytime?”
+6) “Do you offer an enterprise plan?”
+7) “Can we use it for multiple teams?”
+8) “Do you train on our data?” (answer: “Configurable / privacy-first default,” no hard claims)
+
+SECTION #contact — Final CTA
+Banner headline: “Start with one workflow—expand when it sticks.”
+Subhead: “Try a product today, or talk to us about a team rollout.”
+CTAs:
+- Primary: “Try for free”
+- Secondary: “See integrations”
+Optional small line: “Prefer email? hello@yourdomain.com”
 
 FOOTER (same system)
+- Sitemap links (Products, Pricing, Docs, Blog, Contact)
+- Legal (Privacy, Terms)
+- Social icons
+- Small note: “All claims and badges must be verified by the site owner.”
