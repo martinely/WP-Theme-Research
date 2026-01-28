@@ -1,196 +1,65 @@
-PROMPT — HOME_03 (AI Trainers / Consultants) (Desktop, 1440)
+PROMPT — HOME_03 (AI Trainers / Consultants) (Desktop 1440)
 
 Design a premium WordPress theme homepage (desktop only) for “AI Trainers / Consultants”.
-This is Home 3 (secondary). Use the SAME global design system as Home 1 (typography, spacing, buttons, card radii, header/footer), but a DISTINCT hero composition and section order.
-Canvas: 1440w, 12-col grid, container 1200 centered, gutter 24. One frame only (no mobile).
-Builder: Elementor + Elementor Pro only. Reusable sections + global styles. No “magic” LMS features.
+Home 3 (secondary). Same global design system as Home 1 (header/footer/tokens), but distinct hero + section order.
+Canvas: 1440w, 12-col grid, container 1200 centered, gutter 24. One frame only.
+Builder: Elementor + Elementor Pro only.
 
 GOAL
-Sell training + consulting programs with credibility, curriculum clarity, and booking conversion.
-No invented stats. If a number is needed, use placeholders like “X sessions”, “X weeks”, “# learners”.
+Sell training + consulting programs with strong credibility, curriculum clarity, and booking CTA.
+No invented stats. Use placeholders like “X sessions” if needed.
 
 STYLE
-High-end, credible, human-first. Tech-forward but warm (not sterile).
-Avoid cliché AI visuals. Prefer workshop photography, annotated curriculum cards, subtle “framework” diagrams.
-Use shared signature motifs (workflow chips / subtle connector lines) but adapt to “learning + adoption” context.
+Warm, confident, workshop-led. Less “software UI”, more “people + curriculum”.
+Use tasteful photography placeholders + structured curriculum cards.
 
-HARD UX RULES
-- Primary CTA must be “Book a consultation” and must route to an external scheduler embed/link pattern (modal embed preferred).
-- Secondary CTA: “View programs” (scroll to #programs).
-- Keep scannable: clear headings, short paragraphs, bullets, consistent card patterns.
-- No fake certifications, no fake partner logos, no fake outcome metrics.
+HEADER (shared system)
+Nav: Programs, For Teams, For Individuals, Curriculum, Instructors, Resources, Contact.
+Primary CTA button: “Book a consultation” (external scheduler modal pattern).
 
-ANCHORS (annotate small): #programs #formats #curriculum #instructors #teams #proof #resources #faq #contact
-
-HEADER (sticky — same system as Home 1)
-Left: Logo
-Nav: Programs, For Teams, For Individuals, Curriculum, Instructors, Resources, Contact
-Right: Primary button “Book a consultation”
-Small utility link: “Policies & privacy” (can point to footer)
-
-HERO (distinct for Home 3 — workshop + curriculum motif)
-Layout: left copy + right “curriculum stack” visual (3 layered cards) + optional workshop photo tile.
+HERO (distinct for Home 3)
 H1: “Train your team to use AI—safely and effectively.”
-Subhead: “Hands-on workshops and consulting that translate tools into real workflows, guardrails, and measurable adoption.”
-CTAs:
-- Primary: “Book a consultation” (external scheduler modal)
-- Secondary: “View programs” (scroll to #programs)
-Proof chips (no numbers):
-- “Role-based curriculum”
-- “Hands-on exercises”
-- “Templates + playbooks”
-- “Policy + governance basics”
-Right visual:
-- Card 1: “Module: Prompting fundamentals” (bullets: patterns, evaluation, red flags)
-- Card 2: “Module: Workflow automation” (bullets: intake → transform → route)
-- Card 3: “Module: Team rollout” (bullets: SOPs, enablement, measurement)
-Optional photo tile: “Workshop session” (inclusive, natural light)
+Subhead: “Hands-on workshops and consulting that translate tools into real workflows, policies, and measurable adoption.”
+CTAs: Primary “Book a consultation” + Secondary “View programs” (scroll to #programs).
+Visual: workshop photo placeholder + 2–3 curriculum cards motif.
 
-SECTION #programs — Programs (highest priority)
-Headline: “Programs built for real adoption.”
-Subhead: “Choose a starting point—then tailor it to your roles, tools, and policies.”
-3 program cards (each includes: audience, outcomes, format, duration placeholder, CTA):
-Program 1 — “AI Fundamentals for Teams”
-- Audience: “Cross-functional teams”
-- Outcomes:
-  - “Shared language + safe usage patterns”
-  - “Common prompts + evaluation checklist”
-  - “Team guidelines draft (starter)”
-- Format: “Workshop”
-- Duration: “X sessions”
-- CTA: “See program details”
-Program 2 — “Workflow Automation Bootcamp”
-- Audience: “Ops / RevOps / Enablement”
-- Outcomes:
-  - “Map top workflows and pick candidates”
-  - “Build 1–2 automations (guided)”
-  - “Monitoring + handoff basics”
-- Format: “Bootcamp”
-- Duration: “X weeks”
-- CTA: “See program details”
-Program 3 — “Prompting + Evaluation for Business”
-- Audience: “Leads + ICs”
-- Outcomes:
-  - “Reusable prompt patterns”
-  - “Evaluation rubric + test set template”
-  - “Quality + risk review habits”
-- Format: “Workshop series”
-- Duration: “X sessions”
-- CTA: “See program details”
-Below cards: small note “Programs shown as examples—fully editable in the theme.”
+SECTION #programs: Programs (highest priority)
+3 program cards:
+1) “AI Fundamentals for Teams”
+2) “Workflow Automation Bootcamp”
+3) “Prompting + Evaluation for Business”
+Each card: audience, outcomes (no numbers), format, duration placeholder (“X sessions”), CTA “View program”.
 
-SECTION #formats — Delivery formats
-Headline: “Delivery that fits your team.”
-3–4 format tiles:
-- “Remote live”
-- “In-person”
-- “Hybrid cohort”
-- “Office hours / Q&A”
-Each tile: 1–2 lines microcopy (no promises, no numbers).
-Add small line: “We can align with your tools and internal policies.”
+SECTION: Delivery formats
+In-person / remote / hybrid. Cohorts, office hours, async materials (chips + short lines).
 
-SECTION #curriculum — Curriculum preview (accordion or modular grid)
-Headline: “Curriculum you can preview before you buy.”
-Layout: accordion with 6 modules (or 2-column module grid).
-Each module includes: title, 3 bullets, “Includes” line.
-Module examples:
-1) “Foundations: what AI is (and isn’t)”
-- “Capabilities vs limits”
-- “Where it fails”
-- “Risk patterns”
-Includes: “Cheat sheet”
-2) “Prompt patterns that work at work”
-- “Context + constraints”
-- “Examples + counterexamples”
-- “Tone + structure”
-Includes: “Prompt library starter”
-3) “Evaluation: don’t ship vibes”
-- “Rubrics”
-- “Test set template”
-- “Human review loop”
-Includes: “Evaluation worksheet”
-4) “Data, privacy, and safe usage”
-- “Sensitive data guidelines”
-- “Retention basics”
-- “Access control habits”
-Includes: “Policy starter (placeholder)”
-5) “Automation workflows”
-- “Intake → transform → route”
-- “Failure handling”
-- “Audit trail mindset”
-Includes: “Workflow canvas”
-6) “Rollout & adoption”
-- “Enablement plan”
-- “Champions + feedback”
-- “Measurement (placeholder)”
-Includes: “Rollout checklist”
+SECTION #curriculum: Curriculum preview
+Accordion or module grid:
+- Foundations
+- Prompting & workflows
+- Evaluation & guardrails
+- Adoption playbooks
+Each module: bullets of exercises + templates included.
 
-SECTION #instructors — Instructors (credibility block)
-Headline: “Practitioners, not just presenters.”
-Grid of 2–6 instructor cards:
-- Photo placeholder
-- Name
-- Role (e.g., “AI consultant / Automation engineer / Curriculum lead”)
-- Credential line (placeholder, no fake claims): “Ex: former X / taught at Y / built Z”
-- Link placeholders: “LinkedIn”
-Add microcopy: “Replace placeholders with your verified bios.”
+SECTION: Who it’s for
+Role/industry grid (e.g., Sales, Support, Ops, HR, Leadership, Product).
+Each item has a 1-line promise.
 
-SECTION #teams — For Teams (procurement-friendly box)
-Headline: “For teams that need buy-in.”
-Split panel with two sides:
-Left: “What teams get”
-- “SOW-ready scope outline”
-- “Role-based tracks”
-- “Templates + internal enablement”
-- “Optional policy + governance module”
-Right: “How we work”
-- “Discovery call”
-- “Tailored curriculum”
-- “Delivery + exercises”
-- “Handoff + next steps”
-Small disclaimer: “Security/compliance language must reflect your actual posture.”
+SECTION #team: Instructors
+2–6 instructor cards: photo, name, credential line, expertise tags, “LinkedIn” placeholder link.
 
-SECTION #proof — Proof & outcomes (no fake stats)
-Headline: “Credibility, without hype.”
-3 proof modes (cards), all placeholders:
-1) “Client outcomes” (bullets with placeholders)
-- “Reduced manual follow-ups by XX% (placeholder)”
-- “Saved X hours/week (placeholder)”
-2) “Client logos” (logo strip placeholders)
-3) “Testimonials” (2 short quotes with role/company placeholders)
-Quote examples:
-- “Clear curriculum, immediately practical.”
-- “Our team finally has a shared approach.”
+SECTION: For Teams (procurement-friendly box)
+SOW-ready, privacy options, enablement for internal rollout, optional policy templates.
 
-SECTION #resources — Resources
-Headline: “Resources you can ship internally.”
-3 resource teaser cards:
-- “AI usage policy starter (template)”
-- “Prompt library (starter pack)”
-- “Workflow mapping canvas”
-Each card: 1 sentence + CTA “Read / Download” (placeholder).
-Note: “Downloads can be linked externally; theme supports both.”
+SECTION: Resources
+Teasers for guides/checklists/policy templates (3 cards).
 
-SECTION #faq — FAQ (objection handling)
-6–8 questions with short answers:
-1) “Do we need technical skills?”
-2) “Which tools do you support?”
-3) “Can you tailor for roles (sales, ops, legal, HR)?”
-4) “How do you handle privacy and recordings?”
-5) “Do you provide materials and templates?”
-6) “Can we run this as a cohort?”
-7) “Do you offer ongoing support?”
-8) “Can you help with internal policy?”
+SECTION: FAQ
+Prereqs, tools supported, privacy, recordings, materials, customization.
 
-SECTION #contact — Contact / booking
-Headline: “Let’s scope the right starting point.”
-Booking module:
-- Primary: external scheduler (modal embed preferred)
-- Secondary: “Request a callback” form (name, email, message)
-Privacy microcopy: “We’ll only use your info to respond.”
+SECTION: Contact / booking
+Primary: external scheduler modal.
+Secondary: “Request a callback” form.
 
-FOOTER (same system)
-- Sitemap links
-- Privacy / Terms
-- Contact details + social
-- Small note: “All claims must be verified by the site owner.”
+FOOTER (shared system)
+Links + legal + contact.
