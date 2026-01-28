@@ -1,75 +1,110 @@
-SYN-01 (compact, audit-ready) — структура
+# SYN-01_Blueprint (compact, audit-ready) — AI Agency Theme (3 Homes)
 
-## Executive stance (one-page) — AI Agency Theme (3 Homes)
-
-### What we’re building
+## 0) SCOPE
 One premium WordPress theme with **one shared design system** and **three distinct homepages**:
-- **Home 1 (Primary): AI Automation / Integration Agency**
-- **Home 2: AI micro-SaaS products**
-- **Home 3: AI trainers / consultants**
+- **HOME 01 (Primary): AI Automation / Integration Agency**
+- **HOME 02: AI micro-SaaS products**
+- **HOME 03: AI trainers / consultants**
 
-**Rule:** same components + tokens, but **distinct hero framing, CTA logic, and section order per home**.
+**Rule:** same global tokens + shared components, but **distinct hero framing, CTA logic, and section order per home**.
 
 ---
 
-### Shared design system (must feel like one theme)
-Use the same:
+## 1) NON-NEGOTIABLE RULES
+- **Facts-first:** no invented metrics, clients, awards, certifications, numbers.
+- **Allowed placeholders only:** “X+”, “From $X”, “X sessions”, “Team size: X–Y”, “Timeline: X–Y weeks”.
+- **Primary CTAs (must):**
+  - H1: **“Book a discovery call”** (external scheduler modal preferred; link-out allowed)
+  - H2: **“Try a product” / “Start free”**
+  - H3: **“Book a consultation”** (external scheduler modal preferred; link-out allowed)
+- **1 primary CTA per home** (one secondary max).
+- **Avoid AI clichés:** robots, glowing brains, generic “AI” stock. Prefer abstract systems, real teams, dashboards, integrations.
+- Elementor + Elementor Pro only (assumption for templateability). No “magic” features.
+
+---
+
+## 2) TONE DECISION (grounded in our REAL + TF direction)
+Baseline across all homes:
+- **Confident, modern, high-end, tech-forward but warm** (not sterile).
+- **Outcome-oriented, plain language**, minimal buzzwords.
+- Trust is built via **process clarity + proof slots** (logos, testimonials, case snippets, security badges) rather than bold numeric claims.
+
+Home-specific tone:
+- **H1 (Agency):** consultative, delivery-focused, credible; emphasize reliability + security posture + measurable outcomes (with placeholders).
+- **H2 (micro-SaaS):** product-led clarity; benefit-first; trust via privacy/security language + integrations + ratings placeholders.
+- **H3 (Trainers):** authority + curriculum clarity; adoption-focused; credibility via instructors + program structure + outcomes framing.
+
+---
+
+## 3) SHARED DESIGN SYSTEM (must feel like one theme)
+Use the same across all homes:
 - Typography scale, spacing, grid, radii, shadows, icon style
-- Card system (feature/service/program cards), proof strip, testimonial card, CTA band, footer
-- Motion language (subtle, consistent), hover/focus states, accessibility conventions
+- Card system (service/feature/program), proof strip, testimonial card, CTA band, footer
+- Motion language (subtle + consistent), hover/focus states, accessibility conventions
 
-**Shared page grammar (common blocks across homes):**
-1) Hero (headline + subhead + 1–2 CTAs)  
-2) Proof/Trust (logos/badges/metrics chips)  
-3) Offer summary (services/features/programs grid)  
-4) “How it works” / Method / Workflow (stepper or structured narrative)  
-5) Proof deepener (case studies, testimonials, outcomes)  
-6) Conversion close (CTA band + form / booking)  
-7) Footer (legal / privacy / terms as appropriate)
-
----
-
-### What must differ per home (non-negotiable)
-#### Home 1 — AI Automation / Integration Agency (Primary)
-**Positioning:** outcomes + delivery confidence (automation, integration, agents, ROI).  
-**Primary CTA:** contact / book discovery (lead capture).  
-**Section order priority:** Proof early → Services early → Method → Case studies.  
-**Pricing:** not emphasized; avoid plan tables by default.
-
-**H1-specific components:**
-- Capabilities / Services cards (3–6)
-- Methodology stepper (3–6 steps)
-- Case study teaser cards (2–6)
-- Outcomes strip (metric chips, optional)
-
-#### Home 2 — AI micro-SaaS products
-**Positioning:** product value proposition (what it does + why better).  
-**Primary CTA:** start free / sign up.  
-**Secondary CTA:** request demo / contact sales.  
-**Section order priority:** Features → Integrations → Trust/Security → Pricing → Proof.  
-**Pricing:** standard (2–4 plans); enterprise as “Contact sales”.
-
-**H2-specific components:**
-- Feature stacks (rows) + feature grid
-- Integrations row (logo strip)
-- Security/Trust bar (badges)
-- Pricing table (toggle optional)
-
-#### Home 3 — AI trainers / consultants
-**Positioning:** skill uplift + adoption + executive enablement.  
-**Primary CTA:** explore programs / book briefing / enroll.  
-**Section order priority:** Programs → Curriculum/modules → Instructors → Outcomes → CTA.  
-**Pricing:** optional; many require consultation; allow both modes.
-
-**H3-specific components:**
-- Program cards (bootcamps/workshops/courses)
-- Curriculum timeline / module list
-- Instructor bios block
-- Role/industry tracks (simple segmented grid, optional)
+### Shared “page grammar” (common blocks)
+1) Hero (headline + subhead + 1–2 CTAs)
+2) Proof/Trust (logos/badges/metrics chips)
+3) Offer summary (services/features/programs)
+4) How it works / Method (stepper or structured narrative)
+5) Proof deepener (case studies, testimonials, outcomes)
+6) Conversion close (CTA band + form / booking)
+7) Footer (privacy/terms/security links as appropriate)
 
 ---
 
-### Enterprise-only patterns to avoid (keep optional)
+## 4) GLOBAL IA (shared navigation + system)
+### Header (sticky)
+- Nav baseline: **Services, Use Cases, Process, Industries, Proof, Pricing, Resources, Contact**
+- Utility link: **Security & compliance** (can be footer instead)
+- Primary CTA button label is **home-specific** (H1/H2/H3)
+
+### Footer
+- Sitemap links, Privacy/Terms, Contact details, Social
+
+---
+
+## 5) SECTION ORDER — PER HOME (LOCKED)
+### HOME 01 (Agency) — section order
+1) Hero (H1 + subhead + proof chips + 2 CTAs)
+2) Trusted by / logos (optional)
+3) **#use-cases Automation examples** (high priority)
+4) **#services What we do** (4–6 cards)
+5) **#process How we work** (4-step timeline)
+6) Industries grid
+7) **#proof Proof & credibility** (case teasers + testimonials + stack mini-grid)
+8) Pricing (tiers + scope microcopy)
+9) FAQ
+10) **#contact Booking + fallback form**
+11) Footer
+
+### HOME 02 (micro-SaaS) — section order
+1) Hero (product-led value prop + 2 CTAs)
+2) Product suite (3–6 product cards)
+3) Integrations
+4) Use cases (chips grouped by team)
+5) How it works (3 steps + data/privacy link)
+6) Security/Trust bar + testimonials/ratings
+7) Pricing (Free/Pro/Team + toggle; Enterprise optional)
+8) FAQ
+9) CTA band
+10) Footer
+
+### HOME 03 (Trainers) — section order
+1) Hero (adoption + safety + 2 CTAs)
+2) Programs (3 cards)
+3) Delivery formats
+4) **#curriculum Curriculum preview** (accordion/grid)
+5) **#team Instructors**
+6) For Teams (procurement-friendly box)
+7) Resources
+8) FAQ
+9) Contact/booking
+10) Footer
+
+---
+
+## 6) ENTERPRISE-ONLY PATTERNS TO AVOID (keep optional)
 - Mega menus, deep multi-level nav, region selectors
 - Heavy “trust center” / long compliance sections as mandatory homepage content
 - Huge resource libraries / careers portals as core IA
@@ -77,111 +112,244 @@ Use the same:
 
 ---
 
-### Content model (what needs to be editable cleanly)
-Prefer flexible repeaters over hard CPTs unless reuse is obvious.
+## 7) CONTENT MODEL (editable objects)
+Prefer repeaters / flexible fields over hard CPTs unless reuse is obvious.
 
-**Global (shared) editable objects:**
+### Global editable objects (shared)
 - Proof chips (text + optional icon)
 - Logos strip (logo + label)
 - Testimonials (quote + name + role + company)
 - CTA band (headline + subhead + button + optional small note)
 
-**Home 1 objects:**
+### H1 objects
 - Services/capabilities (title + 1–2 lines + link)
+- Use-case cards (Inputs / Automates / Result)
 - Process steps (label + 1 line)
-- Case studies (headline + outcome line + link)
+- Case studies (Problem / Approach / Outcome line + link)
 
-**Home 2 objects:**
+### H2 objects
+- Product cards (name + promise + “best for” tags + bullets + CTA)
 - Features (title + 1 line)
 - Integrations (logo + name)
-- Plans (plan name + price + bullets + CTA)
+- Plans (name + price placeholder + bullets + CTA)
 - Security badges (badge + label)
+- Use-case chips (team grouping)
 
-**Home 3 objects:**
-- Programs (title + audience + duration + outcomes + CTA)
+### H3 objects
+- Programs (title + audience + duration placeholder + outcomes + CTA)
 - Modules (label + bullets)
-- Instructors (name + credential line + focus)
+- Instructors (name + credential line + focus + link placeholder)
+- Role/industry tracks (simple segmented grid, optional)
 
 ---
 
-### Design outcome goal
-A single theme that can launch as:
-- a premium agency site (Home 1),
-- a SaaS landing + pricing funnel (Home 2),
-- a training/education offer (Home 3),
+## 8) COPY RULES (premium tone)
+- One-line headlines; concrete verbs; minimal filler.
+- Avoid vague superlatives (“best”, “revolutionary”) unless a nearby proof slot exists.
+- Every claim should have an adjacent proof slot (logo/quote/badge/case snippet).
 
-without feeling like three unrelated templates.
+---
 
+# APPENDIX — CONTENT PACKS (ready-to-use copy)
 
-0) Non-negotiables
-	•	One design system, 3 home variants (H1/H2/H3)
-	•	Distinct: Hero, section order, proof type, CTA destination
-	•	Avoid: mega menus, enterprise portals, deep compliance hubs (освен като линк)
+## HOME 01 — CONTENT PACK (Agency)
 
-1) Shared design principles (за да не стане “3 темплейта”)
-	•	One typography scale, one spacing system, one card system
-	•	One “proof language” component, но с различни съдържания:
-	•	H1: outcomes + logos
-	•	H2: compliance + ratings + integrations
-	•	H3: instructor credibility + learner/corp proof + outcomes
-	•	1 primary CTA per home, 1 secondary max
+### Hero
+H1: Automate work. Integrate systems. Ship faster.  
+Subhead: We design and deploy AI + workflow automations across your tools—reliably, securely, and with measurable outcomes.  
+Primary CTA: Book a discovery call  
+Secondary CTA: View automation examples  
+Proof chips:
+- Zapier / Make / n8n
+- OpenAI / Anthropic
+- HubSpot / Salesforce
+- Slack / Google Workspace
+Micro trust line (optional): Built for production, not demos.
 
-2) Home blueprints (по 8–10 секции макс)
+### Services cards (4–6)
+- AI workflow automation — Reduce manual handoffs and busywork across teams.
+- System integrations & API glue — Connect tools cleanly, with reliable data flow.
+- Internal tools & agents — Assist teams with retrieval, drafting, triage, and routing.
+- Data pipelines & enrichment — Normalize, enrich, and sync data where it matters.
+- Support & monitoring — Keep automations healthy with observability + iteration.
 
-За всеки Home описваме:
-	•	Goal (1 sentence)
-	•	Hero: structure + CTA labels + “what to show”
-	•	Section order (numbered)
-	•	Proof pack (какъв тип доказателства)
-	•	Content objects (какви “карти” и списъци)
-	•	Do / Don’t
+### Use-case cards (schema + examples)
+Card format: Title + Tags + Inputs / Automates / Result
 
-H1 — AI Automation / Integration Agency (primary)
-	1.	Hero (promise + CTA: Book/Contact) + 1 proof chip row
-	2.	Proof strip (logos + outcomes metrics)
-	3.	Capabilities grid (3–5)
-	4.	Method / process stepper
-	5.	Case studies teaser (2–3)
-	6.	Industries / use-cases (light)
-	7.	Testimonials (optional)
-	8.	CTA band + form
+1) Lead intake → enrichment → routing  
+Inputs: web forms, email, CRM  
+Automates: enrichment, dedupe, assignment, alerts  
+Result: faster follow-up, cleaner pipeline
 
-H2 — AI Micro-SaaS
-	1.	Hero (value prop) + CTA: Start free + secondary: Request demo
-	2.	Feature stack (core loop)
-	3.	Integrations row
-	4.	Trust bar (security/compliance + ratings)
-	5.	Use-cases grid (teams)
-	6.	Pricing preview (or full pricing)
-	7.	Testimonials/quotes
-	8.	CTA band
+2) Support triage → summarization → ticket creation  
+Inputs: inbox, chat, helpdesk  
+Automates: summarise, classify, create ticket, escalate  
+Result: quicker response, consistent triage
 
-H3 — AI Trainers / Consultants
-	1.	Hero (outcome + CTA: Explore programs / Book briefing)
-	2.	Programs overview (tracks)
-	3.	Curriculum modules (tabs/accordion)
-	4.	Who it’s for (roles/industries)
-	5.	Instructor credibility (bios)
-	6.	Outcomes/proof (learner/corp)
-	7.	Pricing optional (if applicable)
-	8.	CTA band
+3) Finance ops → invoice matching → alerts  
+Inputs: invoices, PO data, accounting tool  
+Automates: match, flag exceptions, notify approver  
+Result: fewer exceptions missed
 
-3) Component kit (shared + per home)
+4) Sales calls → notes → follow-ups → tasks  
+Inputs: meeting recordings, CRM  
+Automates: notes, action items, CRM updates  
+Result: better follow-through
 
-Списък само на компоненти, но с variant notes:
-	•	Header (simple dropdown only)
-	•	Hero (3 variants)
-	•	Cards system (service/feature/program/program)
-	•	Proof strip (3 content modes)
-	•	Stepper (H1)
-	•	Integrations row (H2)
-	•	Trust bar (H2)
-	•	Pricing (H2 / optional H3)
-	•	Curriculum tabs/accordion (H3)
-	•	Case study cards (H1)
-	•	CTA band + form
+5) Recruiting → screening → scheduling  
+Inputs: applications, calendar  
+Automates: screen, shortlist, schedule, reminders  
+Result: less admin overhead
 
-4) Copy rules (за “премиум” тон)
-	•	One-line headlines, конкретни глаголи
-	•	Забранени: vague claims (“best”, “revolutionary”) без proof slot
-	•	Every claim must have a nearby proof slot (logo/metric/badge/testimonial)
+6) Knowledge base → Q&A bot → escalation  
+Inputs: docs, wiki, tickets  
+Automates: answer drafts, cite sources, escalate when needed  
+Result: faster internal answers
+
+### Process (4 steps)
+1) Discovery & success criteria — define workflows, constraints, and “done”.  
+2) Map workflows + data access — systems, permissions, risks, edge cases.  
+3) Build + test + security review — staged rollout, validation, QA.  
+4) Launch + monitor + iterate — observability, tweaks, ongoing support.  
+Microcopy: Prefer to talk first? (phone placeholder)
+
+### Proof section copy (templates)
+Case study card structure:
+- Problem:
+- Approach:
+- Outcome: (placeholders ok)
+
+Testimonials (2–3):
+- “Short quote about reliability and delivery.” — Name, Role (Company)
+
+Stack mini-grid label: Our stack (tools & platforms we ship with)
+
+### Pricing tiers (no real numbers)
+- Starter automation — for one workflow / one team.
+- Growth systems — multiple workflows + integrations + reporting.
+- Enterprise program — multi-team rollout + governance + support.  
+Microcopy: Scope varies by systems and access.
+
+### FAQ (6–8)
+- What access do you need to start?
+- Do you build on our existing tools or bring your own stack?
+- How do you handle security and sensitive data?
+- Who owns the workflows, code, and documentation?
+- What happens after launch (support/monitoring)?
+- Can you work with partial access or sandbox environments?
+- Do you support on-prem or private deployments? (optional)
+
+---
+
+## HOME 02 — CONTENT PACK (micro-SaaS)
+
+### Hero
+H1: Small AI tools that remove daily friction.  
+Subhead: A suite of focused micro-SaaS products—meeting notes, workflow assistants, and automation add-ons that plug into your stack.  
+Primary CTA: Try a product  
+Secondary CTA: See integrations
+
+### Product suite (example cards)
+- Meeting Notes  
+Promise: Turn meetings into clean notes, decisions, and tasks.  
+Best for: Sales, Support, Managers  
+Bullets: summaries • action items • follow-ups • exports  
+CTA: View product
+
+- Inbox Triage  
+Promise: Classify requests and draft replies faster.  
+Best for: Ops, Support  
+Bullets: routing • templates • escalation • audit trail  
+CTA: View product
+
+- CRM Assistant  
+Promise: Keep CRM updated without manual entry.  
+Best for: Sales teams  
+Bullets: call notes • field updates • reminders • hygiene checks  
+CTA: View product
+
+### Integrations
+Label: Connect in minutes.  
+Text: Works with your meeting tools, chat, and CRMs (integration grid).
+
+### How it works (3 steps)
+1) Connect  
+2) Configure  
+3) Run  
+Link text: Data & privacy
+
+### Pricing (placeholders)
+Plans: Free / Pro / Team (+ Enterprise optional “Contact sales”)  
+Toggle: Monthly / Annual (visual)  
+Microcopy: Cancel anytime. Export your data.
+
+### FAQ (6–8)
+- What data do you store?
+- Do you train models on our content?
+- Can we export notes and tasks?
+- Does it work with X tool?
+- How does billing work?
+- How do we cancel or downgrade?
+
+---
+
+## HOME 03 — CONTENT PACK (Trainers / Consultants)
+
+### Hero
+H1: Train your team to use AI—safely and effectively.  
+Subhead: Hands-on workshops and consulting that translate tools into real workflows, policies, and measurable adoption.  
+Primary CTA: Book a consultation  
+Secondary CTA: View programs
+
+### Programs (3 cards)
+- AI Fundamentals for Teams  
+Audience: cross-functional teams  
+Outcomes: shared language, safe usage patterns, internal playbooks  
+Format: workshop + exercises  
+Duration: X sessions  
+CTA: Get details
+
+- Workflow Automation Bootcamp  
+Audience: ops, RevOps, product, IT  
+Outcomes: automate core workflows, governance basics, rollout plan  
+Format: bootcamp + templates  
+Duration: X weeks  
+CTA: Get details
+
+- Prompting + Evaluation for Business  
+Audience: analysts, marketing, support  
+Outcomes: prompt patterns, evaluation rubrics, quality control  
+Format: hands-on lab  
+Duration: X sessions  
+CTA: Get details
+
+### Delivery formats
+In-person / Remote / Hybrid  
+Team cohorts + office hours + async materials
+
+### Curriculum preview (#curriculum)
+- Foundations: models, limits, safety  
+- Prompt patterns: structure, constraints, iteration  
+- Workflow integration: tools, data, approvals  
+- Evaluation: QA, rubrics, hallucination handling  
+- Governance: policies, roles, escalation  
+- Capstone: real workflow prototype
+
+### Instructors (#team)
+2–6 cards: Name / Role / Expertise / LinkedIn placeholder / Short credential line
+
+### For Teams (procurement-friendly box)
+- SOW-ready scope options
+- Privacy options (placeholders)
+- Enablement materials + internal rollout support
+
+### Resources
+Guides, checklists, policy templates (teasers)
+
+### FAQ
+- Prerequisites?
+- Tools supported?
+- Recordings and materials?
+- Policy / governance coverage?
+- Customisation for industry?
+- How to measure adoption? (no numbers)
