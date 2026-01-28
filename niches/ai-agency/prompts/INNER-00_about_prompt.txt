@@ -1,1 +1,188 @@
-TBD (INNER-00_about_prompt.txt)
+PROMPT — INNER-00 (About / Company) — AI Agency Theme (3 Homes) (Desktop, 1440)
+
+Design a premium WordPress theme INNER PAGE template (desktop only) for the niche: “AI Automation / Integration Agency” with two additional homepage variants in the same theme:
+- Home 1: AI Automation / Integration Agency (primary)
+- Home 2: AI micro-SaaS products
+- Home 3: AI trainers / consultants
+
+This prompt is for the shared INNER template: About / Company.
+It must work for all three homes via content + module toggles, while keeping ONE design system.
+
+CANVAS / GRID
+- Desktop only: 1440w, 12-col grid, 1200px centered container, 24px gutters
+- One frame only (no mobile, no toggle)
+
+BUILDER ASSUMPTION
+- WordPress theme template intended for Elementor + Elementor Pro
+- Use reusable sections + global tokens (typography, spacing, buttons, cards)
+
+STYLE (shared system)
+- Modern, high-end, confident. Tech-forward but warm (not sterile).
+- Avoid generic AI clichés (robots/brains). Prefer abstract systems, real teams, subtle diagrams, restrained gradients.
+- Signature motifs allowed: “workflow chips”, thin connector lines, micro-diagram separators.
+- Card radius 16; large panels 20; soft shadows; generous whitespace; accessible contrast.
+
+HARD RULES
+- Facts only: Do NOT invent metrics, awards, client logos, certifications, locations, or timelines.
+- If a number is needed, use placeholders: “X+”, “Since 20XX”, “$X”, “X weeks”.
+- If compliance/security is referenced, keep it generic and optional (“Security & compliance approach”)—no claims.
+
+PAGE GOAL
+Build trust + clarity:
+- Who we are
+- What we believe (delivery philosophy)
+- How we work (approach)
+- Who leads / team credibility
+- Where we operate (optional)
+- Clear next steps CTA (consistent with each home’s primary CTA)
+
+URL / TEMPLATE ID
+- Template: INNER-00 About / Company
+- Suggested slug: /about/ (or /company/)
+
+GLOBAL HEADER (sticky, shared)
+- Left: Logo
+- Nav:
+  - For Home 1 default: Services, Use Cases, Process, Industries, Proof, Pricing, Resources, Contact
+  - For Home 2 variant: Products, Use Cases, Integrations, Pricing, Docs, Blog, Contact
+  - For Home 3 variant: Programs, For Teams, Curriculum, Instructors, Resources, Contact
+- Right: Primary CTA button (contextual):
+  - Home 1: “Book a discovery call”
+  - Home 2: “Try a product”
+  - Home 3: “Book a consultation”
+- Utility link (small): “Security & compliance” (optional; can also live in footer)
+
+BREADCRUMBS (optional)
+- Home / About
+
+PAGE HERO (About)
+- H1: “About [Brand]”
+- Subhead (2 lines max): “We help teams adopt AI with reliable delivery—strategy, integrations, and enablement that fit your tools and constraints.”
+- Right-side “Quick facts” panel (NO real numbers):
+  - “What we do: AI automation, integrations, enablement”
+  - “How we engage: Projects + retainers”
+  - “Where: Remote / On-site (placeholder)”
+  - “Security: By design (link to Security page/section)”
+- CTAs (contextual):
+  - Primary CTA button (same as header)
+  - Secondary link: “See our work” (scroll to #proof or link to Case Studies/Examples)
+- Visual: abstract workflow diagram or tasteful team photo placeholder
+
+SECTION #mission (high priority)
+Title: “Our mission”
+- 2 short paragraphs (max 70–90 words total)
+- Bullet list (3–5) of “What you can expect”:
+  - “Clear scope and success criteria”
+  - “Documentation you can own”
+  - “Secure-by-default implementations”
+  - “Change management and enablement”
+  - “Support and iteration”
+
+SECTION #principles
+Title: “How we think about delivery”
+- 4 principle cards (icon optional; no cliché AI icons)
+- Each card:
+  - Principle name (short)
+  - 1 sentence explanation (outcome-focused)
+Examples of principle names:
+- “Workflows first”
+- “Human-in-the-loop”
+- “Ship in slices”
+- “Observability & ownership”
+
+SECTION #approach (shared narrative)
+Title: “Our approach”
+- Stepper timeline (4 steps) with short descriptions:
+  1) “Discovery & success criteria” — clarify goals, constraints, stakeholders
+  2) “Workflow + data mapping” — systems, access, data quality, edge cases
+  3) “Build + test + security review” — QA, logging, permissions, rollback plan
+  4) “Launch + monitor + iterate” — training, handoff, ongoing improvements
+- Microcopy line under stepper:
+  “Prefer to talk first? (phone placeholder)”
+
+SECTION #team (credibility)
+Title: “Meet the team”
+- Team grid (2–6 cards)
+- Each card includes:
+  - Photo placeholder
+  - Name placeholder
+  - Role (e.g., Automation Lead, Solutions Architect)
+  - 2–3 expertise chips (e.g., “Integrations”, “LLM ops”, “Data pipelines”)
+  - Optional links: “LinkedIn”, “Email”
+- Optional “Advisors” sub-row (toggle on/off)
+
+SECTION #capabilities (lightweight)
+Title: “What we’re good at”
+- Two-column layout:
+  - Left: short paragraph (1–2 lines) positioning breadth without bloat
+  - Right: checklist bullets (8–12 max), grouped:
+    - “Automation” (e.g., intake routing, notifications, approvals)
+    - “Integrations” (APIs, webhooks, iPaaS)
+    - “Data” (enrichment, sync, governance)
+    - “Enablement” (training, playbooks)
+- No tools list here if it duplicates footer; keep tools in a compact strip below.
+
+SECTION (optional) #stack
+Title: “Tools we work with”
+- Logo/chip grid (placeholders only)
+- Categories:
+  - iPaaS: Zapier / Make / n8n (placeholders)
+  - LLM: OpenAI / Anthropic (placeholders)
+  - Business: HubSpot / Salesforce (placeholders)
+  - Collab: Slack / Google Workspace (placeholders)
+- Microcopy: “We adapt to your stack—this is a sample.”
+
+SECTION #proof (lightweight, no invented results)
+Title: “Proof of work”
+- 3 case teaser cards with structure:
+  - “Problem” (1 line)
+  - “Approach” (1 line)
+  - “Outcome” (1 line, no numbers)
+  - CTA: “View example” (links to Case Study/Examples template)
+- Optional testimonials (2 cards) with placeholders:
+  - Quote (1–2 lines)
+  - Name / role / company (placeholders)
+
+SECTION #security (optional, generic)
+Title: “Security & compliance approach”
+- 3 cards:
+  - “Access & permissions”
+  - “Data handling”
+  - “Auditability”
+- Each card: 2–3 bullets, no certifications claimed.
+- Link: “See details” (to Security page if exists)
+
+SECTION #contact (conversion)
+Title: “Let’s talk”
+- Left: copy block:
+  - Headline: “Tell us what you want to automate.”
+  - Microcopy: “We’ll reply within 1 business day.” (no other promises)
+- Right: CTA module (variant by home):
+  - Home 1: Primary = “Book a discovery call” (external scheduler modal embed preferred)
+  - Home 2: Primary = “Try a product” (scroll/link to Products)
+  - Home 3: Primary = “Book a consultation” (external scheduler modal)
+- Secondary: “Request a callback” mini form (name, email, message)
+- Privacy microcopy: “We’ll only use your info to respond.”
+
+FOOTER (shared)
+- Sitemap links (contextual)
+- Privacy / Terms
+- Contact details placeholders + social
+
+ELEMENTOR TEMPLATE NOTES (implementation-friendly)
+- Use global theme styles for typography + buttons
+- Sections as reusable templates:
+  - About Hero
+  - Mission
+  - Principles grid
+  - Approach stepper
+  - Team grid
+  - Capabilities checklist
+  - Stack chips
+  - Proof teasers
+  - Security approach
+  - Contact / CTA
+- All content must be editable via Elementor widgets (no hard-coded strings)
+
+OUTPUT EXPECTATION
+Return a single desktop page design (header → footer) following the sections above, with realistic placeholder copy (no invented facts), clear hierarchy, and premium spacing.
