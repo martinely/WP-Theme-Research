@@ -1,3 +1,5 @@
+PROMPT — HOME_01 (AI Automation / Integration Agency) (Desktop, 1440)
+
 Design a premium WordPress theme homepage (desktop only) for an “AI Automation / Integration Agency”.
 This is Home 1 (primary). Goal: conversion-first, trust-first, enterprise-friendly (credible), not corporate-bloated.
 Canvas: 1440w, 12-col grid, container 1200 centered, gutter 24. One frame only (no mobile).
